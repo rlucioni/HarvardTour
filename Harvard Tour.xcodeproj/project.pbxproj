@@ -56,7 +56,6 @@
 		65E7855D14808A2E0029C348 = {
 			isa = PBXGroup;
 			children = (
-				65E7858914808B5D0029C348 /* MapKit.framework */,
 				65E7857214808A2E0029C348 /* Harvard Tour */,
 				65E7856B14808A2E0029C348 /* Frameworks */,
 				65E7856914808A2E0029C348 /* Products */,
@@ -74,6 +73,7 @@
 		65E7856B14808A2E0029C348 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65E7858914808B5D0029C348 /* MapKit.framework */,
 				65E7856C14808A2E0029C348 /* UIKit.framework */,
 				65E7856E14808A2E0029C348 /* Foundation.framework */,
 				65E7857014808A2E0029C348 /* CoreGraphics.framework */,
