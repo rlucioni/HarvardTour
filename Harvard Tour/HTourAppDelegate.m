@@ -3,7 +3,6 @@
 //  Harvard Tour
 //
 //  Created by Renzo Lucioni on 11/25/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "HTourAppDelegate.h"
@@ -11,10 +10,14 @@
 @implementation HTourAppDelegate
 
 @synthesize window = _window;
+@synthesize viewController=_viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

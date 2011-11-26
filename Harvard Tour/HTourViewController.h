@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapKit/MapKit.h"
 
-@interface HTourViewController : UIViewController
+@interface HTourViewController : UIViewController <MKMapViewDelegate> {
+    MKMapView *_mapView;
+}
+
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;
 
 @end
