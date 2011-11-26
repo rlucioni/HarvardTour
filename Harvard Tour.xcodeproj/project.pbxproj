@@ -15,6 +15,7 @@
 		65E7857D14808A2E0029C348 /* HTourAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E7857C14808A2E0029C348 /* HTourAppDelegate.m */; };
 		65E7858014808A2E0029C348 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E7857E14808A2E0029C348 /* MainStoryboard.storyboard */; };
 		65E7858314808A2E0029C348 /* HTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E7858214808A2E0029C348 /* HTourViewController.m */; };
+		65E7858A14808B5D0029C348 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7858914808B5D0029C348 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,16 @@
 		65E7856C14808A2E0029C348 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65E7856E14808A2E0029C348 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65E7857014808A2E0029C348 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		65E7857414808A2E0029C348 /* Harvard Tour-Info.plist */ = {isa = PBXFileReference; path = "Harvard Tour-Info.plist"; sourceTree = "<group>"; };
+		65E7857414808A2E0029C348 /* Harvard Tour-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Harvard Tour-Info.plist"; sourceTree = "<group>"; };
 		65E7857614808A2E0029C348 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65E7857814808A2E0029C348 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		65E7857A14808A2E0029C348 /* Harvard Tour-Prefix.pch */ = {isa = PBXFileReference; path = "Harvard Tour-Prefix.pch"; sourceTree = "<group>"; };
-		65E7857B14808A2E0029C348 /* HTourAppDelegate.h */ = {isa = PBXFileReference; path = HTourAppDelegate.h; sourceTree = "<group>"; };
+		65E7857A14808A2E0029C348 /* Harvard Tour-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Harvard Tour-Prefix.pch"; sourceTree = "<group>"; };
+		65E7857B14808A2E0029C348 /* HTourAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTourAppDelegate.h; sourceTree = "<group>"; };
 		65E7857C14808A2E0029C348 /* HTourAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTourAppDelegate.m; sourceTree = "<group>"; };
 		65E7857F14808A2E0029C348 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		65E7858114808A2E0029C348 /* HTourViewController.h */ = {isa = PBXFileReference; path = HTourViewController.h; sourceTree = "<group>"; };
+		65E7858114808A2E0029C348 /* HTourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTourViewController.h; sourceTree = "<group>"; };
 		65E7858214808A2E0029C348 /* HTourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTourViewController.m; sourceTree = "<group>"; };
+		65E7858914808B5D0029C348 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E7858A14808B5D0029C348 /* MapKit.framework in Frameworks */,
 				65E7856D14808A2E0029C348 /* UIKit.framework in Frameworks */,
 				65E7856F14808A2E0029C348 /* Foundation.framework in Frameworks */,
 				65E7857114808A2E0029C348 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +53,7 @@
 		65E7855D14808A2E0029C348 = {
 			isa = PBXGroup;
 			children = (
+				65E7858914808B5D0029C348 /* MapKit.framework */,
 				65E7857214808A2E0029C348 /* Harvard Tour */,
 				65E7856B14808A2E0029C348 /* Frameworks */,
 				65E7856914808A2E0029C348 /* Products */,
