@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65E7856D14808A2E0029C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856C14808A2E0029C348 /* UIKit.framework */; };
+		65E7856F14808A2E0029C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856E14808A2E0029C348 /* Foundation.framework */; };
+		65E7857114808A2E0029C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7857014808A2E0029C348 /* CoreGraphics.framework */; };
+		65E7857714808A2E0029C348 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65E7857514808A2E0029C348 /* InfoPlist.strings */; };
+		65E7857914808A2E0029C348 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E7857814808A2E0029C348 /* main.m */; };
+		65E7857D14808A2E0029C348 /* HTourAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E7857C14808A2E0029C348 /* HTourAppDelegate.m */; };
+		65E7858014808A2E0029C348 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E7857E14808A2E0029C348 /* MainStoryboard.storyboard */; };
+		65E7858314808A2E0029C348 /* HTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E7858214808A2E0029C348 /* HTourViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		65E7856814808A2E0029C348 /* Harvard Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Harvard Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E7856C14808A2E0029C348 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		65E7856E14808A2E0029C348 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		65E7857014808A2E0029C348 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		65E7857414808A2E0029C348 /* Harvard Tour-Info.plist */ = {isa = PBXFileReference; path = "Harvard Tour-Info.plist"; sourceTree = "<group>"; };
+		65E7857614808A2E0029C348 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65E7857814808A2E0029C348 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65E7857A14808A2E0029C348 /* Harvard Tour-Prefix.pch */ = {isa = PBXFileReference; path = "Harvard Tour-Prefix.pch"; sourceTree = "<group>"; };
+		65E7857B14808A2E0029C348 /* HTourAppDelegate.h */ = {isa = PBXFileReference; path = HTourAppDelegate.h; sourceTree = "<group>"; };
+		65E7857C14808A2E0029C348 /* HTourAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTourAppDelegate.m; sourceTree = "<group>"; };
+		65E7857F14808A2E0029C348 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		65E7858114808A2E0029C348 /* HTourViewController.h */ = {isa = PBXFileReference; path = HTourViewController.h; sourceTree = "<group>"; };
+		65E7858214808A2E0029C348 /* HTourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTourViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65E7856514808A2E0029C348 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7856D14808A2E0029C348 /* UIKit.framework in Frameworks */,
+				65E7856F14808A2E0029C348 /* Foundation.framework in Frameworks */,
+				65E7857114808A2E0029C348 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65E7855D14808A2E0029C348 = {
+			isa = PBXGroup;
+			children = (
+				65E7857214808A2E0029C348 /* Harvard Tour */,
+				65E7856B14808A2E0029C348 /* Frameworks */,
+				65E7856914808A2E0029C348 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65E7856914808A2E0029C348 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65E7856814808A2E0029C348 /* Harvard Tour.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65E7856B14808A2E0029C348 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E7856C14808A2E0029C348 /* UIKit.framework */,
+				65E7856E14808A2E0029C348 /* Foundation.framework */,
+				65E7857014808A2E0029C348 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65E7857214808A2E0029C348 /* Harvard Tour */ = {
+			isa = PBXGroup;
+			children = (
+				65E7857B14808A2E0029C348 /* HTourAppDelegate.h */,
+				65E7857C14808A2E0029C348 /* HTourAppDelegate.m */,
+				65E7857E14808A2E0029C348 /* MainStoryboard.storyboard */,
+				65E7858114808A2E0029C348 /* HTourViewController.h */,
+				65E7858214808A2E0029C348 /* HTourViewController.m */,
+				65E7857314808A2E0029C348 /* Supporting Files */,
+			);
+			path = "Harvard Tour";
+			sourceTree = "<group>";
+		};
+		65E7857314808A2E0029C348 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65E7857414808A2E0029C348 /* Harvard Tour-Info.plist */,
+				65E7857514808A2E0029C348 /* InfoPlist.strings */,
+				65E7857814808A2E0029C348 /* main.m */,
+				65E7857A14808A2E0029C348 /* Harvard Tour-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65E7856714808A2E0029C348 /* Harvard Tour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E7858614808A2E0029C348 /* Build configuration list for PBXNativeTarget "Harvard Tour" */;
+			buildPhases = (
+				65E7856414808A2E0029C348 /* Sources */,
+				65E7856514808A2E0029C348 /* Frameworks */,
+				65E7856614808A2E0029C348 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Harvard Tour";
+			productName = "Harvard Tour";
+			productReference = 65E7856814808A2E0029C348 /* Harvard Tour.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65E7855F14808A2E0029C348 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 65E7856214808A2E0029C348 /* Build configuration list for PBXProject "Harvard Tour" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 65E7855D14808A2E0029C348;
+			productRefGroup = 65E7856914808A2E0029C348 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65E7856714808A2E0029C348 /* Harvard Tour */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65E7856614808A2E0029C348 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7857714808A2E0029C348 /* InfoPlist.strings in Resources */,
+				65E7858014808A2E0029C348 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65E7856414808A2E0029C348 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7857914808A2E0029C348 /* main.m in Sources */,
+				65E7857D14808A2E0029C348 /* HTourAppDelegate.m in Sources */,
+				65E7858314808A2E0029C348 /* HTourViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		65E7857514808A2E0029C348 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E7857614808A2E0029C348 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		65E7857E14808A2E0029C348 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E7857F14808A2E0029C348 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65E7858414808A2E0029C348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		65E7858514808A2E0029C348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65E7858714808A2E0029C348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Harvard Tour/Harvard Tour-Prefix.pch";
+				INFOPLIST_FILE = "Harvard Tour/Harvard Tour-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		65E7858814808A2E0029C348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Harvard Tour/Harvard Tour-Prefix.pch";
+				INFOPLIST_FILE = "Harvard Tour/Harvard Tour-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65E7856214808A2E0029C348 /* Build configuration list for PBXProject "Harvard Tour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7858414808A2E0029C348 /* Debug */,
+				65E7858514808A2E0029C348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E7858614808A2E0029C348 /* Build configuration list for PBXNativeTarget "Harvard Tour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7858714808A2E0029C348 /* Debug */,
+				65E7858814808A2E0029C348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65E7855F14808A2E0029C348 /* Project object */;
+}
