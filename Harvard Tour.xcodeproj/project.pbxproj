@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65C8BD001480908B006BA2BA /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C8BCFF1480908B006BA2BA /* CustomAnnotation.m */; };
+		652E9E7A1481B84C00C3793A /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 652E9E781481B84C00C3793A /* CustomAnnotation.m */; };
 		65E7856D14808A2E0029C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856C14808A2E0029C348 /* UIKit.framework */; };
 		65E7856F14808A2E0029C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856E14808A2E0029C348 /* Foundation.framework */; };
 		65E7857114808A2E0029C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7857014808A2E0029C348 /* CoreGraphics.framework */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65C8BCFD14809081006BA2BA /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotation.h; path = "../../../iOS Wikipedia AR App/section-ios-3-src/src/Section3App3/Section3App3/CustomAnnotation.h"; sourceTree = "<group>"; };
-		65C8BCFF1480908B006BA2BA /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAnnotation.m; path = "../../../iOS Wikipedia AR App/section-ios-3-src/src/Section3App3/Section3App3/CustomAnnotation.m"; sourceTree = "<group>"; };
+		652E9E781481B84C00C3793A /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		652E9E791481B84C00C3793A /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		65E7856814808A2E0029C348 /* Harvard Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Harvard Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E7856C14808A2E0029C348 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65E7856E14808A2E0029C348 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,8 +89,8 @@
 				65E7857E14808A2E0029C348 /* MainStoryboard.storyboard */,
 				65E7858114808A2E0029C348 /* HTourViewController.h */,
 				65E7858214808A2E0029C348 /* HTourViewController.m */,
-				65C8BCFD14809081006BA2BA /* CustomAnnotation.h */,
-				65C8BCFF1480908B006BA2BA /* CustomAnnotation.m */,
+				652E9E781481B84C00C3793A /* CustomAnnotation.m */,
+				652E9E791481B84C00C3793A /* CustomAnnotation.h */,
 				65E7857314808A2E0029C348 /* Supporting Files */,
 			);
 			path = "Harvard Tour";
@@ -172,7 +172,7 @@
 				65E7857914808A2E0029C348 /* main.m in Sources */,
 				65E7857D14808A2E0029C348 /* HTourAppDelegate.m in Sources */,
 				65E7858314808A2E0029C348 /* HTourViewController.m in Sources */,
-				65C8BD001480908B006BA2BA /* CustomAnnotation.m in Sources */,
+				652E9E7A1481B84C00C3793A /* CustomAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

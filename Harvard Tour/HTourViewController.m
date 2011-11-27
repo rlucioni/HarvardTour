@@ -13,6 +13,7 @@
 
 @synthesize mapView=_mapView;
 
+// is this necessary with ARC?
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -24,7 +25,7 @@
 {
     [super viewDidLoad];
     
-    // define span for map: how much area will be shown
+    // define span for map: how much area will be shown on screen
     MKCoordinateSpan span;
     span.latitudeDelta = 0.002;
     span.longitudeDelta = 0.002;
@@ -34,7 +35,7 @@
     start.latitude = 42.37461191594064;
     start.longitude = -71.11746847629547;
     
-    // create region, consisting of span and location
+    // create region consisting of span and location
     MKCoordinateRegion region;
     region.span = span;
     region.center = start;
@@ -60,7 +61,10 @@
     // create annotation for Canaday
     CustomAnnotation *canaday = [[CustomAnnotation alloc] initWithCoordinate:canadayLocation];
     canaday.title = @"Canaday";
-    canaday.subtitle = @"The worst dorm (historical info here)";
+    canaday.subtitle = @"The worst dorm (historical info / Wiki link here?)";
+    
+    // TODO
+    // hardcode other dorms and locations on campus here?
     
     // add annotations to map
     [self.mapView addAnnotation:hollis];
@@ -68,16 +72,19 @@
     
 }
 
+
 /*
  * Define each annotation
  */
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    // try to re-use pin annotation view
+    // attempt to re-use pin annotation view
     MKPinAnnotationView *pin = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Marker"];
     
-    // none available in the cache    
-    if (pin == nil) {
+    // if none available in cache    
+    if (pin == nil) 
+    {
         // allocate new pin
         pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Marker"];
         
@@ -85,25 +92,28 @@
         pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     }
     
-    // change color to red
-    pin.pinColor = MKPinAnnotationColorRed;
+    // CODE HERE IS NOT EXECUTING - CONTROL CONNECT TO STORYBOARD MAY BE THE ISSUE
     
-    // animate pin dropping
+    // change pin color to purple
+    pin.pinColor = MKPinAnnotationColorPurple;
+    
+    // animate pin drop (does not work - iOS SDK 5.0 change/Storyboard compatible?)
     pin.animatesDrop = YES;
     
-    // show callout when tapped
+    // show information callout when tapped
     pin.canShowCallout = YES;
     
     return pin;
 }
 
+
 /*
- * Fired when user taps detail disclosure button
- * Show pop-up of location tapped
+ * Executes when user taps detail disclosure button. Shows pop-up of location tapped.
  */
+
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    // annotation is a property of MKAnnotationView, and we are using our Marker class as the nnotation
+    // annotation is a property of MKAnnotationView; using Marker class as the nnotation
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Detail Button Tapped" message:((CustomAnnotation *)view.annotation).title
                                                    delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     [alert show];

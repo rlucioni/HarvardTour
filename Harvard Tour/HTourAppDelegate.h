@@ -9,9 +9,7 @@
 
 @class HTourViewController;
 
-@interface HTourAppDelegate : NSObject <UIApplicationDelegate> {
-    
-}
+@interface HTourAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

@@ -1,9 +1,9 @@
-/**
- *  Marker.h
- *  Section3App3
- *  Tommy MacWilliam, 2011
- *
- */
+//
+//  CustomAnnotation.h
+//  Harvard Tour
+//
+//  Created by Renzo Lucioni on 11/25/11.
+//
 
 #import <Foundation/Foundation.h>
 #import "MapKit/Mapkit.h"
@@ -15,6 +15,8 @@
 }
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+
+// inheritance issues?
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *subtitle;
 
