@@ -73,8 +73,8 @@
 		6591169814831E730008BC6C /* lib3DAR Fat Binary.webloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lib3DAR Fat Binary.webloc"; sourceTree = "<group>"; };
 		6591169914831E730008BC6C /* QUICKSTART.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QUICKSTART.txt; sourceTree = "<group>"; };
 		6591169A14831E730008BC6C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		65B39388148406F60091AE14 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		65B3938A148406FF0091AE14 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		65B39388148406F60091AE14 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../../Default@2x.png"; sourceTree = "<group>"; };
+		65B3938A148406FF0091AE14 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../Default.png; sourceTree = "<group>"; };
 		65E7856814808A2E0029C348 /* HarvardTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarvardTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E7856C14808A2E0029C348 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65E7856E14808A2E0029C348 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +148,8 @@
 		6591168314831E730008BC6C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				65B3938A148406FF0091AE14 /* Default.png */,
+				65B39388148406F60091AE14 /* Default@2x.png */,
 				6591168414831E730008BC6C /* 3dar_logo.png */,
 				6591168514831E730008BC6C /* 3dar_logo@2x.png */,
 				6591168614831E730008BC6C /* 3dar_marker_icon1.png */,
@@ -190,8 +192,6 @@
 		65E7855D14808A2E0029C348 = {
 			isa = PBXGroup;
 			children = (
-				65B3938A148406FF0091AE14 /* Default.png */,
-				65B39388148406F60091AE14 /* Default@2x.png */,
 				6591167F14831E730008BC6C /* 3DAR */,
 				65E7857214808A2E0029C348 /* Harvard Tour */,
 				65E7856B14808A2E0029C348 /* Frameworks */,
