@@ -84,6 +84,7 @@
     canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
     
     // test
+    //test 2
     
     // add annotations to map
     [self.mapView addAnnotation:statue];
