@@ -83,6 +83,8 @@
     canaday.title = @"Canaday";
     canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
     
+    // test
+    
     // add annotations to map
     [self.mapView addAnnotation:statue];
     [self.mapView addAnnotation:hollis];
