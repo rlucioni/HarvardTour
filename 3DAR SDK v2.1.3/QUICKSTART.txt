@@ -1,0 +1,16 @@
+3DAR Quick Start Instructions:
+
+1)  Unzip the SDK zip file.
+2)  Copy the "3DAR" folder directly into your Xcode project.
+3)  Go to http://3dar.us/docs/ to see which frameworks and build settings to add.
+4)  If you want to use the iOS simulator, link with the lib3DAR fat binary.
+5)  Import SM3DAR.h and change MKMapView to SM3DARMapView.
+6)  To load points at initialization time, implement sm3darLoadPoints: in the map delegate class.
+7)  Add points of interest by adding map annotations.
+8)  Call startCamera or addBackground on the map view after 3DAR initializes and after the view appears.
+9)  Change marker icons by changing the files named 3dar_marker_icon1.png and 3dar_marker_icon1_focused.png.
+10) In 3dar.plist use 3darMapMode="auto", or change to "manual" and call showMap, hideMap or toggleMap.
+
+Ask questions at http://groups.google.com/group/3dar
+E-mail support@spotmetrix.com for more help
+
