@@ -83,9 +83,6 @@
     canaday.title = @"Canaday";
     canaday.subtitle = @"The worst dorm";
     
-    // TODO
-    // hardcode other dorms and locations on campus here?
-    
     // add annotations to map
     [self.mapView addAnnotation:statue];
     [self.mapView addAnnotation:hollis];
@@ -94,6 +91,12 @@
     
 }
 
+/* 
+ - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
+{ 
+    [mapView addAnnotation:myAnnotation];
+}
+*/
 
 /*
  * Define each annotation

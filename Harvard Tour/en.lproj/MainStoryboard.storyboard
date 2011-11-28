@@ -20,6 +20,13 @@
                                     <outlet property="delegate" destination="3" id="nn1-3P-URq"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Augmented reality powered by 3DAR from Spot Metrix" lineBreakMode="tailTruncation" minimumFontSize="10" id="9Ev-Je-z9g">
+                                <rect key="frame" x="41" y="428" width="415" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -31,6 +38,17 @@
             <point key="canvasLocation" x="384" y="268"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="HTourViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HTourViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="SM3DARMapView"/>
+            </relationships>
+        </class>
+        <class className="SM3DARMapView" superclassName="MKMapView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SM3DARMapView.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -107,7 +107,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6591167F14831E730008BC6C /* 3DAR SDK v2.1.3 */ = {
+		6591167F14831E730008BC6C /* 3DAR */ = {
 			isa = PBXGroup;
 			children = (
 				6591168014831E730008BC6C /* 3DAR */,
@@ -116,6 +116,7 @@
 				6591169914831E730008BC6C /* QUICKSTART.txt */,
 				6591169A14831E730008BC6C /* README.txt */,
 			);
+			name = 3DAR;
 			path = "3DAR SDK v2.1.3";
 			sourceTree = "<group>";
 		};
@@ -186,7 +187,7 @@
 		65E7855D14808A2E0029C348 = {
 			isa = PBXGroup;
 			children = (
-				6591167F14831E730008BC6C /* 3DAR SDK v2.1.3 */,
+				6591167F14831E730008BC6C /* 3DAR */,
 				65E7857214808A2E0029C348 /* Harvard Tour */,
 				65E7856B14808A2E0029C348 /* Frameworks */,
 				65E7856914808A2E0029C348 /* Products */,
