@@ -83,15 +83,23 @@
     canaday.title = @"Canaday";
     canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
     
-    // test
-    //test 2
+    // create location for Wigg
+    CLLocationCoordinate2D wiggLocation;
+    wiggLocation.latitude = 42.373066332548795;
+    wiggLocation.longitude = -71.11716270446777;
+    
+    // create annotation for Wigg
+    CustomAnnotation *wigg = [[CustomAnnotation alloc] initWithCoordinate:wiggLocation];
+    wigg.title = @"Wigglesworth";
+    wigg.subtitle = @"Middle Wigglesworth";
     
     // add annotations to map
     [self.mapView addAnnotation:statue];
     [self.mapView addAnnotation:hollis];
     [self.mapView addAnnotation:stoughton];
     [self.mapView addAnnotation:canaday];
-    
+    [self.mapView addAnnotation:wigg];
+
 }
 
 /* 
