@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Harvard Tour.xcodeproj">
+      location = "self:HarvardTour.xcodeproj">
    </FileRef>
 </Workspace>

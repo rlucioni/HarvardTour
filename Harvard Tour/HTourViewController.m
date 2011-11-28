@@ -43,6 +43,16 @@
     // move the map to our location
     [self.mapView setRegion:region animated:YES];
     
+    // create location for John Harvard statue
+    CLLocationCoordinate2D statueLocation;
+    statueLocation.latitude = 42.374473211292376;
+    statueLocation.longitude = -71.11719220876694;
+    
+    // create annotation for John Harvard statue
+    CustomAnnotation *statue = [[CustomAnnotation alloc] initWithCoordinate:statueLocation];
+    statue.title = @"John Harvard statue";
+    statue.subtitle = @"A Puritan minister (c. 1630)";
+    
     // create location for Hollis
     CLLocationCoordinate2D hollisLocation;
     hollisLocation.latitude = 42.37500623176736;
@@ -53,6 +63,16 @@
     hollis.title = @"Hollis";
     hollis.subtitle = @"The best dorm";
     
+    // create location for Stoughton
+    CLLocationCoordinate2D stoughtonLocation;
+    stoughtonLocation.latitude = 42.37538073043612;
+    stoughtonLocation.longitude = -71.11772328615189;
+    
+    // create annotation for Stoughton
+    CustomAnnotation *stoughton = [[CustomAnnotation alloc] initWithCoordinate:stoughtonLocation];
+    stoughton.title = @"Stoughton";
+    stoughton.subtitle = @"Hollis' twin dorm";
+    
     // create location for Canaday
     CLLocationCoordinate2D canadayLocation;
     canadayLocation.latitude = 42.37520834243742;
@@ -61,13 +81,15 @@
     // create annotation for Canaday
     CustomAnnotation *canaday = [[CustomAnnotation alloc] initWithCoordinate:canadayLocation];
     canaday.title = @"Canaday";
-    canaday.subtitle = @"The worst dorm (historical info / Wiki link here?)";
+    canaday.subtitle = @"The worst dorm";
     
     // TODO
     // hardcode other dorms and locations on campus here?
     
     // add annotations to map
+    [self.mapView addAnnotation:statue];
     [self.mapView addAnnotation:hollis];
+    [self.mapView addAnnotation:stoughton];
     [self.mapView addAnnotation:canaday];
     
 }

@@ -7,12 +7,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
+#import "SM3DAR.h"
 
 @interface HTourViewController : UIViewController <MKMapViewDelegate> 
 {
-    MKMapView *_mapView;
+    SM3DARMapView *_mapView;
 }
 
-@property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) IBOutlet SM3DARMapView *mapView;
 
 @end
