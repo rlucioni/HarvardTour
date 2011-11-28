@@ -81,7 +81,7 @@
     // create annotation for Canaday
     CustomAnnotation *canaday = [[CustomAnnotation alloc] initWithCoordinate:canadayLocation];
     canaday.title = @"Canaday";
-    canaday.subtitle = @"The worst dorm";
+    canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
     
     // add annotations to map
     [self.mapView addAnnotation:statue];
