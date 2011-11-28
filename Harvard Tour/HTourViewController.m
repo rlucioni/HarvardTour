@@ -43,15 +43,15 @@
     // move the map to our location
     [self.mapView setRegion:region animated:YES];
     
-    // create location for John Harvard statue
-    CLLocationCoordinate2D statueLocation;
-    statueLocation.latitude = 42.374473211292376;
-    statueLocation.longitude = -71.11719220876694;
+    // create location for Canaday
+    CLLocationCoordinate2D canadayLocation;
+    canadayLocation.latitude = 42.37520834243742;
+    canadayLocation.longitude = -71.11585646867752;
     
-    // create annotation for John Harvard statue
-    CustomAnnotation *statue = [[CustomAnnotation alloc] initWithCoordinate:statueLocation];
-    statue.title = @"John Harvard statue";
-    statue.subtitle = @"A Puritan minister (c. 1630)";
+    // create annotation for Canaday
+    CustomAnnotation *canaday = [[CustomAnnotation alloc] initWithCoordinate:canadayLocation];
+    canaday.title = @"Canaday";
+    canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
     
     // create location for Hollis
     CLLocationCoordinate2D hollisLocation;
@@ -63,6 +63,18 @@
     hollis.title = @"Hollis";
     hollis.subtitle = @"The best dorm";
     
+    // create location for John Harvard statue
+    CLLocationCoordinate2D statueLocation;
+    statueLocation.latitude = 42.374473211292376;
+    statueLocation.longitude = -71.11719220876694;
+    
+    // create annotation for John Harvard statue
+    CustomAnnotation *statue = [[CustomAnnotation alloc] initWithCoordinate:statueLocation];
+    statue.title = @"John Harvard statue";
+    statue.subtitle = @"A Puritan minister (c. 1630)";
+    
+  
+    
     // create location for Stoughton
     CLLocationCoordinate2D stoughtonLocation;
     stoughtonLocation.latitude = 42.37538073043612;
@@ -73,33 +85,61 @@
     stoughton.title = @"Stoughton";
     stoughton.subtitle = @"Hollis' twin dorm";
     
-    // create location for Canaday
-    CLLocationCoordinate2D canadayLocation;
-    canadayLocation.latitude = 42.37520834243742;
-    canadayLocation.longitude = -71.11585646867752;
+   // create location for Middle Wigg
+    CLLocationCoordinate2D wiggmidLocation;
+    wiggmidLocation.latitude = 42.373066332548795;
+    wiggmidLocation.longitude = -71.11716270446777;
     
-    // create annotation for Canaday
-    CustomAnnotation *canaday = [[CustomAnnotation alloc] initWithCoordinate:canadayLocation];
-    canaday.title = @"Canaday";
-    canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
+    // create annotation for Middle Wigg
+    CustomAnnotation *wiggmid = [[CustomAnnotation alloc] initWithCoordinate:wiggmidLocation];
+    wiggmid.title = @"Middle Wigglesworth";
+    wiggmid.subtitle = @"Middle Wigglesworth is the best! ";
     
-    // create location for Wigg
-    CLLocationCoordinate2D wiggLocation;
-    wiggLocation.latitude = 42.373066332548795;
-    wiggLocation.longitude = -71.11716270446777;
+    // create location for Big Wigg
+    CLLocationCoordinate2D wiggbigLocation;
+    wiggbigLocation.latitude = 42.373066332548795;
+    wiggbigLocation.longitude = -71.11716270446777;
     
-    // create annotation for Wigg
-    CustomAnnotation *wigg = [[CustomAnnotation alloc] initWithCoordinate:wiggLocation];
-    wigg.title = @"Wigglesworth";
-    wigg.subtitle = @"Middle Wigglesworth";
+    // create annotation for big Wigg
+    CustomAnnotation *wiggbig = [[CustomAnnotation alloc] initWithCoordinate:wiggbigLocation];
+    wiggbig.title = @"Middle Wigglesworth";
+    wiggbig.subtitle = @"Middle Wigglesworth is the best! ";
+    
     
     // add annotations to map
     [self.mapView addAnnotation:statue];
     [self.mapView addAnnotation:hollis];
     [self.mapView addAnnotation:stoughton];
     [self.mapView addAnnotation:canaday];
-    [self.mapView addAnnotation:wigg];
-
+    [self.mapView addAnnotation:wiggmid];
+    [self.mapView addAnnotation:wiggbig];
+    //[self.mapView addAnnotation:wiggsmall];
+    //[self.mapView addAnnotation:lamont];
+    //[self.mapView addAnnotation:houghton];
+    //[self.mapView addAnnotation:loeb];
+    //[self.mapView addAnnotation:boyslton];
+    //[self.mapView addAnnotation:widener];
+    //[self.mapView addAnnotation:wadsworth];
+    //[self.mapView addAnnotation:grays];
+    //[self.mapView addAnnotation:dudley];
+    //[self.mapView addAnnotation:straus];
+    //[self.mapView addAnnotation:matthews];
+    //[self.mapView addAnnotation:masshall];
+    //[self.mapView addAnnotation:weld];
+    //[self.mapView addAnnotation:weld];
+    //[self.mapView addAnnotation:universityhall];
+    //[self.mapView addAnnotation:harvardhall];
+    //[self.mapView addAnnotation:lionel];
+    //[self.mapView addAnnotation:holden];
+    //[self.mapView addAnnotation:mower];
+    //[self.mapView addAnnotation:pbha];
+    //[self.mapView addAnnotation:holworthy];
+    //[self.mapView addAnnotation:thayer];
+    //[self.mapView addAnnotation:church];
+    //[self.mapView addAnnotation:robinson];
+    //[self.mapView addAnnotation:sever];
+    //[self.mapView addAnnotation:emerson];
+    
 }
 
 /* 
