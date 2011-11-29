@@ -395,6 +395,15 @@
 }
 */
 
+
+/*
+- (void)viewDidAppear
+{
+    [_mapView startCamera];
+}
+*/
+
+
 /*
  * Define each annotation
  */
