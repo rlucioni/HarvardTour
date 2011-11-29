@@ -61,7 +61,7 @@
     // create annotation for Hollis
     CustomAnnotation *hollis = [[CustomAnnotation alloc] initWithCoordinate:hollisLocation];
     hollis.title = @"Hollis";
-    hollis.subtitle = @"The best dorm";
+    hollis.subtitle = @"Built in 1763, Hollis is one of the oldest buildings at Harvard. It housed George Washington's troops during the revolution. Past residents include Ralph Waldo Emerson, Henry David Thoreau, John Updike, Charles Sumner, and Jim Cramer.";
     
     // create location for John Harvard statue
     CLLocationCoordinate2D statueLocation;
