@@ -163,12 +163,12 @@
     widener.title = @"Widener Library";
     widener.subtitle = @"Not as cool as mid wigg";
     
-    // create location for wadsworth
+    // create location for Wadsworth
     CLLocationCoordinate2D wadLocation;
     wadLocation.latitude = 42.372830528661574;
     wadLocation.longitude = -71.11622929573059;
     
-    // create annotation for wadsworth
+    // create annotation for Wadsworth
     CustomAnnotation *wad = [[CustomAnnotation alloc] initWithCoordinate:wadLocation];
     wad.title = @"Wadsworth Hall";
     wad.subtitle = @"Not as cool as mid wigg";
@@ -192,7 +192,6 @@
     CustomAnnotation *dudley = [[CustomAnnotation alloc] initWithCoordinate:dudleyLocation];
     dudley.title = @"Dudley House";
     dudley.subtitle = @"Not as cool as mid wigg";
-    
     
     // create location for Strauss
     CLLocationCoordinate2D straussLocation;
@@ -234,7 +233,7 @@
     weld.title = @"Weld House";
     weld.subtitle = @"Not as cool as mid wigg";
     
-    // create location for University hall
+    // create location for University Hall
     CLLocationCoordinate2D univLocation;
     univLocation.latitude = 42.372830528661574;
     univLocation.longitude = -71.11622929573059;
@@ -244,12 +243,12 @@
     univ.title = @"University Hall";
     univ.subtitle = @"Not as cool as mid wigg";
     
-    // create location for Harvard hall
+    // create location for Harvard Hall
     CLLocationCoordinate2D hhallLocation;
     hhallLocation.latitude = 42.372830528661574;
     hhallLocation.longitude = -71.11622929573059;
     
-    // create annotation for Harvard hall
+    // create annotation for Harvard Hall
     CustomAnnotation *hhall = [[CustomAnnotation alloc] initWithCoordinate:hhallLocation];
     hhall.title = @"Harvard Hall";
     hhall.subtitle = @"Not as cool as mid wigg";
@@ -264,12 +263,12 @@
     lionel.title = @"Lionel House";
     lionel.subtitle = @"Not as cool as mid wigg";
     
-    // create location for Holden
+    // create location for Holden Chapel
     CLLocationCoordinate2D holdenLocation;
     holdenLocation.latitude = 42.372830528661574;
     holdenLocation.longitude = -71.11622929573059;
     
-    // create annotation for Holden
+    // create annotation for Holden Chapel
     CustomAnnotation *holden = [[CustomAnnotation alloc] initWithCoordinate:holdenLocation];
     holden.title = @"Holden Chapel";
     holden.subtitle = @"Not as cool as mid wigg";
@@ -283,7 +282,6 @@
     CustomAnnotation *mower = [[CustomAnnotation alloc] initWithCoordinate:mowerLocation];
     mower.title = @"Mower Hall";
     mower.subtitle = @"Not as cool as mid wigg";
-    
     
     // create location for PBHA
     CLLocationCoordinate2D pbhaLocation;
@@ -315,12 +313,12 @@
     thayer.title = @"Thayer Hall";
     thayer.subtitle = @"Not as cool as mid wigg";
     
-    // create location for Church
+    // create location for Memorial Church
     CLLocationCoordinate2D churchLocation;
     churchLocation.latitude = 42.372830528661574;
     churchLocation.longitude = -71.11622929573059;
     
-    // create annotation for Church
+    // create annotation for Memorial Church
     CustomAnnotation *church = [[CustomAnnotation alloc] initWithCoordinate:churchLocation];
     church.title = @"Memorial church";
     church.subtitle = @"Not as cool as mid wigg";
