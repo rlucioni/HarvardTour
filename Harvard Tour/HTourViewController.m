@@ -2,7 +2,7 @@
 //  HTourViewController.m
 //  Harvard Tour
 //
-//  Created by Renzo Lucioni on 11/25/11.
+//  Created by Renzo Lucioni and Anuv Ratan on 11/25/11.
 //
 
 #import "HTourViewController.h"
@@ -15,6 +15,7 @@
 
 // is this necessary with ARC?
 - (void)didReceiveMemoryWarning
+
 {
     [super didReceiveMemoryWarning];
 }
@@ -212,7 +213,7 @@
     // create annotation for Matthews
     CustomAnnotation *matthews = [[CustomAnnotation alloc] initWithCoordinate:matthewsLocation];
     matthews.title = @"Matthews House";
-    matthews.subtitle = @"Not as cool as mid wigg";
+    matthews.subtitle = @"Matthews Hall is one of the dormitories housing first-year students at Harvard College. It is located in the southwest portion of Harvard Yard. It was constructed in 1871 at a cost of $115,000";
     
     // create location for Mass Hall
     CLLocationCoordinate2D masshallLocation;
