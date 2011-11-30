@@ -9,11 +9,9 @@
 #import "MapKit/MapKit.h"
 #import "SM3DAR.h"
 
-@interface HTourViewController : UIViewController <MKMapViewDelegate, SM3DARDelegate> 
+@interface HTourViewController : UIViewController <SM3DARDelegate> 
 {
-    BOOL sm3darInitialized;
-    
-    SM3DARMapView *mapView;
+    SM3DARMapView *_mapView;
 }
 
 @property (nonatomic, retain) IBOutlet SM3DARMapView *mapView;
