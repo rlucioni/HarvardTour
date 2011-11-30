@@ -11,15 +11,14 @@
 
 @implementation HTourViewController
 
-@synthesize mapView=_mapView;
+@synthesize mapView;
 
-// is this necessary with ARC?
-- (void)didReceiveMemoryWarning
+- (void) viewDidAppear:(BOOL)animated 
 {
-    [super didReceiveMemoryWarning];
+	[super viewDidAppear:animated];
+        
+    [mapView.sm3dar startCamera];
 }
-
-#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -388,18 +387,17 @@
     
 }
 
-/* 
- - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
-{ 
-    [mapView addAnnotation:myAnnotation];
+- (void)didReceiveMemoryWarning 
+{
+    NSLog(@"\n\ndidReceiveMemoryWarning\n\n");
+    [super didReceiveMemoryWarning];
 }
-*/
 
 
 /*
-- (void)viewDidAppear
-{
-    [_mapView startCamera];
+- (void) sm3darLoadPoints:(SM3DARController *)sm3dar
+{ 
+    [mapView addAnnotation:myAnnotation];
 }
 */
 

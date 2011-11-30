@@ -16,7 +16,6 @@
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
-// inheritance issues?
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
 
