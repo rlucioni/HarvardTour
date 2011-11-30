@@ -440,7 +440,7 @@
     // change pin color to purple
     pin.pinColor = MKPinAnnotationColorPurple;
     
-    // animate pin drop (does not work - iOS SDK 5.0 change/Storyboard compatible?)
+    // animate pin drop
     pin.animatesDrop = YES;
     
     // show information callout when tapped
