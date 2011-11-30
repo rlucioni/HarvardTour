@@ -58,7 +58,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
 
 - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
@@ -438,8 +437,6 @@
         pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     }
     
-    // CODE HERE IS NOT EXECUTING - CONTROL CONNECT TO STORYBOARD MAY BE THE ISSUE
-    
     // change pin color to purple
     pin.pinColor = MKPinAnnotationColorPurple;
     
@@ -460,7 +457,8 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     // annotation is a property of MKAnnotationView; using Marker class as the nnotation
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Detail Button Tapped" message:((CustomAnnotation *)view.annotation).title
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Detail Button Tapped" 
+                                                    message:((CustomAnnotation *)view.annotation).title
                                                    delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     [alert show];
 }
