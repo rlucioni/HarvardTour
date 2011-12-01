@@ -296,8 +296,8 @@
      
      // create location for Harvard Hall
      CLLocationCoordinate2D hhallLocation;
-     hhallLocation.latitude = 42.37443754433333;
-     hhallLocation.longitude = -71.11622929573059;
+     hhallLocation.latitude = 42.37484771313964;
+     hhallLocation.longitude = -71.11818462610245;
      
      // create annotation for Harvard Hall
      CustomAnnotation *hhall = [[CustomAnnotation alloc] initWithCoordinate:hhallLocation];
@@ -487,7 +487,7 @@
     pin.pinColor = MKPinAnnotationColorPurple;
     
     // animate pin drop
-    pin.animatesDrop = YES;
+    // pin.animatesDrop = YES;
     
     // show information callout when tapped
     pin.canShowCallout = YES;
