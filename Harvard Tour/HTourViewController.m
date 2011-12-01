@@ -514,7 +514,7 @@
      
      // create location for Harvard Hall
      CLLocationCoordinate2D hhallLocation;
-     hhallLocation.latitude = 71.11820876598358;
+     hhallLocation.latitude = 42.37443754433333;
      hhallLocation.longitude = -71.11622929573059;
      
      // create annotation for Harvard Hall
