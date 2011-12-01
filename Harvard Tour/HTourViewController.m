@@ -15,11 +15,38 @@
 @implementation HTourViewController
 
 @synthesize mapView=_mapView;
+@synthesize locationManager=_locationManager;
 
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+
+/*
+ * Create an instance of the CLLocationManager
+ */
+
+- (void)trackUser
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [_locationManager startUpdatingLocation];
+}
+
+
+/*
+ * Get the current latitude and longitude using the delegate method
+ */
+
+- (void)locationManager:(CLLocationManager *)manager 
+    didUpdateToLocation:(CLLocation *)newLocation 
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"New latitude: %f", newLocation.coordinate.latitude); // STORE TO A VAR THAT CAN BE USED ELSEWHERE?
+    NSLog(@"New longitude: %f", newLocation.coordinate.longitude);
 }
 
 #pragma mark - View lifecycle
@@ -32,10 +59,10 @@
     span.latitudeDelta = 0.002;
     span.longitudeDelta = 0.002;
     
-    // define starting point for map and AR view (Harvard Yard)
+    // define starting point for map and AR view (currently Harvard Yard)
     CLLocationCoordinate2D start;
-    start.latitude = START_LATITUDE;
-    start.longitude = START_LONGITUDE;
+    start.latitude = START_LATITUDE; // ideally user's current latitude
+    start.longitude = START_LONGITUDE; // ideally user's current longitude
     
     // create region consisting of span and location
     MKCoordinateRegion region;
@@ -46,6 +73,7 @@
     [self.mapView setRegion:region animated:YES];
 }
 
+
 - (void)set3darLocation
 {
     // define starting point for map (Harvard Yard)
@@ -54,6 +82,7 @@
     [self.mapView.sm3dar.locationManager stopUpdatingLocation];
     [self.mapView.sm3dar changeCurrentLocation:startLocation];
 }
+
 
 - (void)viewDidLoad
 {
@@ -457,7 +486,7 @@
     pin.pinColor = MKPinAnnotationColorPurple;
     
     // animate pin drop
-    pin.animatesDrop = YES;
+    // pin.animatesDrop = YES;
     
     // show information callout when tapped
     pin.canShowCallout = YES;
@@ -472,8 +501,8 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    // annotation is a property of MKAnnotationView; using Marker class as the nnotation
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"More Details" 
+    // annotation is a property of MKAnnotationView; using Marker class as the annotation
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Additional Details" 
                                                     message:((CustomAnnotation *)view.annotation).subtitle
                                                    delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     [alert show];
