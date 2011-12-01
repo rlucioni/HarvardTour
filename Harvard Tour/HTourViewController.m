@@ -380,7 +380,7 @@
     dunsterLocation.longitude = -71.1159610748291;
 
     // create annotation for Dunster
-    CustomAnnotation *dunster = [[CustomAnnotation alloc] initWithCoordinate:emersonLocation];
+    CustomAnnotation *dunster = [[CustomAnnotation alloc] initWithCoordinate:dunsterLocation];
     dunster.title = @"Dunster House";
     dunster.subtitle = @"Affectionately known as 'Dumpster House'";
         
@@ -425,7 +425,12 @@
 {
 	[super viewDidAppear:animated];
     
+    // start the camera
     [_mapView.sm3dar startCamera];
+    
+    // bring back the status bar, make it solid black
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
 }
 
 
@@ -468,8 +473,8 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     // annotation is a property of MKAnnotationView; using Marker class as the nnotation
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Detail Button Tapped" 
-                                                    message:((CustomAnnotation *)view.annotation).title
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"More Details" 
+                                                    message:((CustomAnnotation *)view.annotation).subtitle
                                                    delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     [alert show];
 }
