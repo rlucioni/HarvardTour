@@ -10,7 +10,6 @@
 		6512948D14843E91006C2135 /* lib3DAR_v2_1_3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6512948C14843E91006C2135 /* lib3DAR_v2_1_3.a */; };
 		652E9E7A1481B84C00C3793A /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 652E9E781481B84C00C3793A /* CustomAnnotation.m */; };
 		6576880214842BA800CAA112 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6576880014842BA800CAA112 /* Default.png */; };
-		6576880314842BA800CAA112 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6576880114842BA800CAA112 /* Default@2x.png */; };
 		6591167B148317560008BC6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65911677148317560008BC6C /* CoreLocation.framework */; };
 		6591167C148317560008BC6C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65911678148317560008BC6C /* CoreMotion.framework */; };
 		6591167D148317560008BC6C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65911679148317560008BC6C /* OpenGLES.framework */; };
@@ -34,6 +33,9 @@
 		65B393D114842B050091AE14 /* lib3DAR Fat Binary.webloc in Resources */ = {isa = PBXBuildFile; fileRef = 65B393BD14842B050091AE14 /* lib3DAR Fat Binary.webloc */; };
 		65B393D214842B050091AE14 /* QUICKSTART.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65B393BE14842B050091AE14 /* QUICKSTART.txt */; };
 		65B393D314842B050091AE14 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65B393BF14842B050091AE14 /* README.txt */; };
+		65C58E7B1487358D005C5F7C /* HarvardTourIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65C58E7A1487358D005C5F7C /* HarvardTourIcon.png */; };
+		65C58E7D14873595005C5F7C /* HarvardTourIcon(.5).png in Resources */ = {isa = PBXBuildFile; fileRef = 65C58E7C14873595005C5F7C /* HarvardTourIcon(.5).png */; };
+		65D2431914873CA400D62AB1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D2431814873CA400D62AB1 /* Default@2x.png */; };
 		65E7856D14808A2E0029C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856C14808A2E0029C348 /* UIKit.framework */; };
 		65E7856F14808A2E0029C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856E14808A2E0029C348 /* Foundation.framework */; };
 		65E7857114808A2E0029C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7857014808A2E0029C348 /* CoreGraphics.framework */; };
@@ -50,7 +52,6 @@
 		652E9E781481B84C00C3793A /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		652E9E791481B84C00C3793A /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		6576880014842BA800CAA112 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6576880114842BA800CAA112 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		65911677148317560008BC6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		65911678148317560008BC6C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		65911679148317560008BC6C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -75,6 +76,9 @@
 		65B393BD14842B050091AE14 /* lib3DAR Fat Binary.webloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lib3DAR Fat Binary.webloc"; sourceTree = "<group>"; };
 		65B393BE14842B050091AE14 /* QUICKSTART.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QUICKSTART.txt; sourceTree = "<group>"; };
 		65B393BF14842B050091AE14 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65C58E7A1487358D005C5F7C /* HarvardTourIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HarvardTourIcon.png; path = ../HarvardTourIcon.png; sourceTree = "<group>"; };
+		65C58E7C14873595005C5F7C /* HarvardTourIcon(.5).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HarvardTourIcon(.5).png"; path = "../HarvardTourIcon(.5).png"; sourceTree = "<group>"; };
+		65D2431814873CA400D62AB1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../../Default@2x.png"; sourceTree = "<group>"; };
 		65E7856814808A2E0029C348 /* HarvardTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarvardTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E7856C14808A2E0029C348 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65E7856E14808A2E0029C348 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6576880014842BA800CAA112 /* Default.png */,
-				6576880114842BA800CAA112 /* Default@2x.png */,
+				65D2431814873CA400D62AB1 /* Default@2x.png */,
 				65B393A914842B050091AE14 /* 3dar_logo.png */,
 				65B393AA14842B050091AE14 /* 3dar_logo@2x.png */,
 				65B393AB14842B050091AE14 /* 3dar_marker_icon1.png */,
@@ -244,6 +248,8 @@
 				65E7857514808A2E0029C348 /* InfoPlist.strings */,
 				65E7857814808A2E0029C348 /* main.m */,
 				65E7857A14808A2E0029C348 /* HarvardTour-Prefix.pch */,
+				65C58E7C14873595005C5F7C /* HarvardTourIcon(.5).png */,
+				65C58E7A1487358D005C5F7C /* HarvardTourIcon.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,7 +326,9 @@
 				65B393D214842B050091AE14 /* QUICKSTART.txt in Resources */,
 				65B393D314842B050091AE14 /* README.txt in Resources */,
 				6576880214842BA800CAA112 /* Default.png in Resources */,
-				6576880314842BA800CAA112 /* Default@2x.png in Resources */,
+				65C58E7B1487358D005C5F7C /* HarvardTourIcon.png in Resources */,
+				65C58E7D14873595005C5F7C /* HarvardTourIcon(.5).png in Resources */,
+				65D2431914873CA400D62AB1 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

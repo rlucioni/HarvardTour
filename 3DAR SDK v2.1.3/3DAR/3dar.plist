@@ -7,7 +7,7 @@
 	<key>3darDisableLocationServices</key>
 	<false/>
 	<key>3darDrawGroundplaneGrid</key>
-	<true/>
+	<false/>
 	<key>3darMapMode</key>
 	<string>auto</string>
 </dict>

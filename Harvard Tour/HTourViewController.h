@@ -9,7 +9,7 @@
 #import "MapKit/MapKit.h"
 #import "SM3DAR.h"
 
-@interface HTourViewController : UIViewController <MKMapViewDelegate> 
+@interface HTourViewController : UIViewController <SM3DARDelegate> 
 {
     SM3DARMapView *_mapView;
 }

@@ -9,11 +9,14 @@
 #import "MapKit/MapKit.h"
 #import "CustomAnnotation.h"
 
+#define START_LATITUDE 42.37461191594064
+#define START_LONGITUDE -71.11746847629547
+
 @implementation HTourViewController
 
 @synthesize mapView=_mapView;
 
-// is this necessary with ARC?
+
 - (void)didReceiveMemoryWarning
 
 {
@@ -22,19 +25,18 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
+
+- (void)setMapRegion
 {
-    [super viewDidLoad];
-    
     // define span for map: how much area will be shown on screen
     MKCoordinateSpan span;
     span.latitudeDelta = 0.002;
     span.longitudeDelta = 0.002;
     
-    // define starting point for map (Harvard Yard)
+    // define starting point for map and AR view (Harvard Yard)
     CLLocationCoordinate2D start;
-    start.latitude = 42.37461191594064;
-    start.longitude = -71.11746847629547;
+    start.latitude = START_LATITUDE;
+    start.longitude = START_LONGITUDE;
     
     // create region consisting of span and location
     MKCoordinateRegion region;
@@ -43,6 +45,7 @@
     
     // move the map to our location
     [self.mapView setRegion:region animated:YES];
+<<<<<<< HEAD
     
     // create location for Canaday
     CLLocationCoordinate2D canadayLocation;
@@ -258,102 +261,348 @@
     CLLocationCoordinate2D lionelLocation;
     lionelLocation.latitude = 42.372830528661574;
     lionelLocation.longitude = -71.11622929573059;
+=======
+}
+>>>>>>> a34083350b2647f1a07d34286aa24cea70b2d4ad
 
-    // create annotation for Lionel
-    CustomAnnotation *lionel = [[CustomAnnotation alloc] initWithCoordinate:lionelLocation];
-    lionel.title = @"Lionel House";
-    lionel.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Holden Chapel
-    CLLocationCoordinate2D holdenLocation;
-    holdenLocation.latitude = 42.372830528661574;
-    holdenLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Holden Chapel
-    CustomAnnotation *holden = [[CustomAnnotation alloc] initWithCoordinate:holdenLocation];
-    holden.title = @"Holden Chapel";
-    holden.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Mower
-    CLLocationCoordinate2D mowerLocation;
-    mowerLocation.latitude = 42.372830528661574;
-    mowerLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Mower
-    CustomAnnotation *mower = [[CustomAnnotation alloc] initWithCoordinate:mowerLocation];
-    mower.title = @"Mower Hall";
-    mower.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for PBHA
-    CLLocationCoordinate2D pbhaLocation;
-    pbhaLocation.latitude = 42.372830528661574;
-    pbhaLocation.longitude = -71.11622929573059;
-    
-    // create annotation for PBHA
-    CustomAnnotation *pbha = [[CustomAnnotation alloc] initWithCoordinate:pbhaLocation];
-    pbha.title = @"Loeb Building";
-    pbha.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Holworthy
-    CLLocationCoordinate2D holworthyLocation;
-    holworthyLocation.latitude = 42.372830528661574;
-    holworthyLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Holworthy
-    CustomAnnotation *holworthy = [[CustomAnnotation alloc] initWithCoordinate:holworthyLocation];
-    holworthy.title = @"Holworthy Hall";
-    holworthy.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Thayer
-    CLLocationCoordinate2D thayerLocation;
-    thayerLocation.latitude = 42.372830528661574;
-    thayerLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Thayer
-    CustomAnnotation *thayer = [[CustomAnnotation alloc] initWithCoordinate:thayerLocation];
-    thayer.title = @"Thayer Hall";
-    thayer.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Memorial Church
-    CLLocationCoordinate2D churchLocation;
-    churchLocation.latitude = 42.372830528661574;
-    churchLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Memorial Church
-    CustomAnnotation *church = [[CustomAnnotation alloc] initWithCoordinate:churchLocation];
-    church.title = @"Memorial church";
-    church.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Robinson
-    CLLocationCoordinate2D robinsonLocation;
-    robinsonLocation.latitude = 42.372830528661574;
-    robinsonLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Robinson
-    CustomAnnotation *robinson = [[CustomAnnotation alloc] initWithCoordinate:robinsonLocation];
-    robinson.title = @"Robinson ";
-    robinson.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Sever
-    CLLocationCoordinate2D severLocation;
-    severLocation.latitude = 42.372830528661574;
-    severLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Sever
-    CustomAnnotation *sever = [[CustomAnnotation alloc] initWithCoordinate:severLocation];
-    sever.title = @"Sever Hall";
-    sever.subtitle = @"Not as cool as mid wigg";
-    
-    // create location for Emerson
-    CLLocationCoordinate2D emersonLocation;
-    emersonLocation.latitude = 42.372830528661574;
-    emersonLocation.longitude = -71.11622929573059;
-    
-    // create annotation for Emerson
-    CustomAnnotation *emerson = [[CustomAnnotation alloc] initWithCoordinate:emersonLocation];
-    emerson.title = @"Emerson Hall";
-    emerson.subtitle = @"Not as cool as mid wigg";
-    
+- (void)set3darLocation
+{
+    // define starting point for map (Harvard Yard)
+    CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:START_LATITUDE longitude:START_LONGITUDE];
+    NSLog(@"Moving 3DAR location to %@", startLocation);
+    [self.mapView.sm3dar.locationManager stopUpdatingLocation];
+    [self.mapView.sm3dar changeCurrentLocation:startLocation];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+- (void) sm3darLoadPoints:(SM3DARController *)sm3dar
+{ 
+     [self set3darLocation];
+ 
+     // create location for Canaday
+     CLLocationCoordinate2D canadayLocation;
+     canadayLocation.latitude = 42.37520834243742;
+     canadayLocation.longitude = -71.11585646867752;
+     
+     // create annotation for Canaday
+     CustomAnnotation *canaday = [[CustomAnnotation alloc] initWithCoordinate:canadayLocation];
+     canaday.title = @"Canaday";
+     canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
+     
+     // create location for Hollis
+     CLLocationCoordinate2D hollisLocation;
+     hollisLocation.latitude = 42.37500623176736;
+     hollisLocation.longitude = -71.11784666776657;
+     
+     // create annotation for Hollis
+     CustomAnnotation *hollis = [[CustomAnnotation alloc] initWithCoordinate:hollisLocation];
+     hollis.title = @"Hollis";
+     hollis.subtitle = @"Built in 1763, Hollis is one of the oldest buildings at Harvard. It housed George Washington's troops during the revolution. Past residents include Ralph Waldo Emerson, Henry David Thoreau, John Updike, Charles Sumner, and Jim Cramer.";
+     
+     // create location for John Harvard statue
+     CLLocationCoordinate2D statueLocation;
+     statueLocation.latitude = 42.374473211292376;
+     statueLocation.longitude = -71.11719220876694;
+     
+     // create annotation for John Harvard statue
+     CustomAnnotation *statue = [[CustomAnnotation alloc] initWithCoordinate:statueLocation];
+     statue.title = @"John Harvard statue";
+     statue.subtitle = @"A Puritan minister (c. 1630)";
+     
+     // create location for Stoughton
+     CLLocationCoordinate2D stoughtonLocation;
+     stoughtonLocation.latitude = 42.37538073043612;
+     stoughtonLocation.longitude = -71.11772328615189;
+     
+     // create annotation for Stoughton
+     CustomAnnotation *stoughton = [[CustomAnnotation alloc] initWithCoordinate:stoughtonLocation];
+     stoughton.title = @"Stoughton";
+     stoughton.subtitle = @"Hollis' twin dorm";
+     
+     // create location for Middle Wigg
+     CLLocationCoordinate2D wiggmidLocation;
+     wiggmidLocation.latitude = 42.373066332548795;
+     wiggmidLocation.longitude = -71.11716270446777;
+     
+     // create annotation for Middle Wigg
+     CustomAnnotation *wiggmid = [[CustomAnnotation alloc] initWithCoordinate:wiggmidLocation];
+     wiggmid.title = @"Middle Wigglesworth";
+     wiggmid.subtitle = @"Middle Wigglesworth is the best! ";
+     
+     // create location for Big Wigg
+     CLLocationCoordinate2D wiggbigLocation;
+     wiggbigLocation.latitude = 42.372830528661574;
+     wiggbigLocation.longitude = -71.11622929573059;
+     
+     // create annotation for Big Wigg
+     CustomAnnotation *wiggbig = [[CustomAnnotation alloc] initWithCoordinate:wiggbigLocation];
+     wiggbig.title = @"Big Wigglesworth";
+     wiggbig.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Small Wigg
+     CLLocationCoordinate2D wiggsmallLocation;
+     wiggsmallLocation.latitude = 42.37328430174117;
+     wiggsmallLocation.longitude = -71.11783862113953;
+     
+     // create annotation for Small Wigg
+     CustomAnnotation *wiggsmall = [[CustomAnnotation alloc] initWithCoordinate:wiggsmallLocation];
+     wiggsmall.title = @"Small Wigglesworth";
+     wiggsmall.subtitle = @"It's Tiny! ";
+     
+     // create location for Lamont 
+     CLLocationCoordinate2D lamontLocation;
+     lamontLocation.latitude = 42.372777026816046;
+     lamontLocation.longitude = -71.11549973487854;
+     
+     // create annotation for Lamont
+     CustomAnnotation *lamont = [[CustomAnnotation alloc] initWithCoordinate:lamontLocation];
+     lamont.title = @"Lamont Library";
+     lamont.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Houghton
+     CLLocationCoordinate2D houghtonLocation;
+     houghtonLocation.latitude = 42.373197114155;
+     houghtonLocation.longitude = -71.11595571041107;
+     
+     // create annotation for Houghton
+     CustomAnnotation *houghton = [[CustomAnnotation alloc] initWithCoordinate:houghtonLocation];
+     houghton.title = @"Houghton Library";
+     houghton.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Loeb
+     CLLocationCoordinate2D loebLocation;
+     loebLocation.latitude = 42.37349434406542;
+     loebLocation.longitude = -71.11532270908356;
+     
+     // create annotation for Loeb
+     CustomAnnotation *loeb = [[CustomAnnotation alloc] initWithCoordinate:loebLocation];
+     loeb.title = @"Loeb Building";
+     loeb.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Boylston
+     CLLocationCoordinate2D boylstonLocation;
+     boylstonLocation.latitude = 42.37335960001366;
+     boylstonLocation.longitude = -71.1172753572464;
+     
+     // create annotation for Boylston
+     CustomAnnotation *boylston = [[CustomAnnotation alloc] initWithCoordinate:boylstonLocation];
+     boylston.title = @"Boylston Hall";
+     boylston.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Widener
+     CLLocationCoordinate2D widenerLocation;
+     widenerLocation.latitude = 42.37347452878183;
+     widenerLocation.longitude = -71.11648142337799;
+     
+     // create annotation for Widener
+     CustomAnnotation *widener = [[CustomAnnotation alloc] initWithCoordinate:widenerLocation];
+     widener.title = @"Widener Library";
+     widener.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Wadsworth
+     CLLocationCoordinate2D wadLocation;
+     wadLocation.latitude = 42.37335167388397;
+     wadLocation.longitude = -71.11813366413116;
+     
+     // create annotation for Wadsworth
+     CustomAnnotation *wad = [[CustomAnnotation alloc] initWithCoordinate:wadLocation];
+     wad.title = @"Wadsworth Hall";
+     wad.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Grays
+     CLLocationCoordinate2D graysLocation;
+     graysLocation.latitude = 42.37365286610913;
+     graysLocation.longitude = -71.11781179904938;
+     
+     // create annotation for Grays
+     CustomAnnotation *grays = [[CustomAnnotation alloc] initWithCoordinate:graysLocation];
+     grays.title = @"Grays House";
+     grays.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Dudley
+     CLLocationCoordinate2D dudleyLocation;
+     dudleyLocation.latitude = 42.373609272586975;
+     dudleyLocation.longitude = -71.11851453781128;
+     
+     // create annotation for Dudley
+     CustomAnnotation *dudley = [[CustomAnnotation alloc] initWithCoordinate:dudleyLocation];
+     dudley.title = @"Dudley House";
+     dudley.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Strauss
+     CLLocationCoordinate2D straussLocation;
+     straussLocation.latitude = 42.3741403188867;
+     straussLocation.longitude = -71.11858427524567;
+     
+     // create annotation for Strauss
+     CustomAnnotation *strauss = [[CustomAnnotation alloc] initWithCoordinate:straussLocation];
+     strauss.title = @"Strauss House";
+     strauss.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Matthews
+     CLLocationCoordinate2D matthewsLocation;
+     matthewsLocation.latitude = 42.37408879966625;
+     matthewsLocation.longitude = -71.11815512180328;
+     
+     // create annotation for Matthews
+     CustomAnnotation *matthews = [[CustomAnnotation alloc] initWithCoordinate:matthewsLocation];
+     matthews.title = @"Matthews House";
+     matthews.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Mass Hall
+     CLLocationCoordinate2D masshallLocation;
+     masshallLocation.latitude = 42.37444547032598;
+     masshallLocation.longitude = -71.11830532550812;
+     
+     // create annotation for Mass Hall
+     CustomAnnotation *masshall = [[CustomAnnotation alloc] initWithCoordinate:masshallLocation];
+     masshall.title = @"Massachusets Hall";
+     masshall.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Weld
+     CLLocationCoordinate2D weldLocation;
+     weldLocation.latitude = 42.37393820477954;
+     weldLocation.longitude = -71.1171144247055;
+     
+     // create annotation for Weld
+     CustomAnnotation *weld = [[CustomAnnotation alloc] initWithCoordinate:weldLocation];
+     weld.title = @"Weld House";
+     weld.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for University Hall
+     CLLocationCoordinate2D univLocation;
+     univLocation.latitude = 42.374441507329784;
+     univLocation.longitude = -71.11706078052521;
+     
+     // create annotation for University Hall
+     CustomAnnotation *univ = [[CustomAnnotation alloc] initWithCoordinate:univLocation];
+     univ.title = @"University Hall";
+     univ.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Harvard Hall
+     CLLocationCoordinate2D hhallLocation;
+     hhallLocation.latitude = 71.11820876598358;
+     hhallLocation.longitude = -71.11622929573059;
+     
+     // create annotation for Harvard Hall
+     CustomAnnotation *hhall = [[CustomAnnotation alloc] initWithCoordinate:hhallLocation];
+     hhall.title = @"Harvard Hall";
+     hhall.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Lionel
+     CLLocationCoordinate2D lionelLocation;
+     lionelLocation.latitude = 42.37512313899895;
+     lionelLocation.longitude = -71.11835896968842;
+     
+     // create annotation for Lionel
+     CustomAnnotation *lionel = [[CustomAnnotation alloc] initWithCoordinate:lionelLocation];
+     lionel.title = @"Lionel House";
+     lionel.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Holden Chapel
+     CLLocationCoordinate2D holdenLocation;
+     holdenLocation.latitude = 42.37526580515624;
+     holdenLocation.longitude = -71.11811220645905;
+     
+     // create annotation for Holden Chapel
+     CustomAnnotation *holden = [[CustomAnnotation alloc] initWithCoordinate:holdenLocation];
+     holden.title = @"Holden Chapel";
+     holden.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Mower
+     CLLocationCoordinate2D mowerLocation;
+     mowerLocation.latitude = 42.375471877922344;
+     mowerLocation.longitude = -71.11824631690979;
+     
+     // create annotation for Mower
+     CustomAnnotation *mower = [[CustomAnnotation alloc] initWithCoordinate:mowerLocation];
+     mower.title = @"Mower Hall";
+     mower.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for PBHA
+     CLLocationCoordinate2D pbhaLocation;
+     pbhaLocation.latitude = 42.37564228373741;
+     pbhaLocation.longitude = -71.11790835857391;
+     
+     // create annotation for PBHA
+     CustomAnnotation *pbha = [[CustomAnnotation alloc] initWithCoordinate:pbhaLocation];
+     pbha.title = @"Loeb Building";
+     pbha.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Holworthy
+     CLLocationCoordinate2D holworthyLocation;
+     holworthyLocation.latitude = 42.37553132186386;
+     holworthyLocation.longitude = -71.11723244190216;
+     
+     // create annotation for Holworthy
+     CustomAnnotation *holworthy = [[CustomAnnotation alloc] initWithCoordinate:holworthyLocation];
+     holworthy.title = @"Holworthy Hall";
+     holworthy.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Thayer
+     CLLocationCoordinate2D thayerLocation;
+     thayerLocation.latitude = 42.375028028047396;
+     thayerLocation.longitude = -71.11673355102539;
+     
+     // create annotation for Thayer
+     CustomAnnotation *thayer = [[CustomAnnotation alloc] initWithCoordinate:thayerLocation];
+     thayer.title = @"Thayer Hall";
+     thayer.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Memorial Church
+     CLLocationCoordinate2D churchLocation;
+     churchLocation.latitude = 42.37490517618842;
+     churchLocation.longitude = -71.11606299877167;
+     
+     // create annotation for Memorial Church
+     CustomAnnotation *church = [[CustomAnnotation alloc] initWithCoordinate:churchLocation];
+     church.title = @"Memorial church";
+     church.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Robinson
+     CLLocationCoordinate2D robinsonLocation;
+     robinsonLocation.latitude = 42.37470306454269;
+     robinsonLocation.longitude = -71.11492574214935;
+     
+     // create annotation for Robinson
+     CustomAnnotation *robinson = [[CustomAnnotation alloc] initWithCoordinate:robinsonLocation];
+     robinson.title = @"Robinson ";
+     robinson.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Sever
+     CLLocationCoordinate2D severLocation;
+     severLocation.latitude = 42.37437809935653;
+     severLocation.longitude = -71.11552655696869;
+     
+     // create annotation for Sever
+     CustomAnnotation *sever = [[CustomAnnotation alloc] initWithCoordinate:severLocation];
+     sever.title = @"Sever Hall";
+     sever.subtitle = @"Not as cool as mid wigg";
+     
+     // create location for Emerson
+     CLLocationCoordinate2D emersonLocation;
+     emersonLocation.latitude = 42.373862907200746;
+     emersonLocation.longitude = -71.11521005630493;
+     
+     // create annotation for Emerson
+     CustomAnnotation *emerson = [[CustomAnnotation alloc] initWithCoordinate:emersonLocation];
+     emerson.title = @"Emerson Hall";
+     emerson.subtitle = @"Not as cool as mid wigg";
+
+    // create location for Dunster
+    CLLocationCoordinate2D dunsterLocation;
+    dunsterLocation.latitude = 42.36868697304995;
+    dunsterLocation.longitude = -71.1159610748291;
+
+    // create annotation for Dunster
+    CustomAnnotation *dunster = [[CustomAnnotation alloc] initWithCoordinate:dunsterLocation];
+    dunster.title = @"Dunster House";
+    dunster.subtitle = @"Affectionately known as 'Dumpster House'";
+        
     // add annotations to map
     [self.mapView addAnnotation:statue];
     [self.mapView addAnnotation:hollis];
@@ -386,23 +635,22 @@
     [self.mapView addAnnotation:robinson];
     [self.mapView addAnnotation:sever];
     [self.mapView addAnnotation:emerson];
-    
+    [self.mapView addAnnotation:dunster];
 }
 
-/* 
- - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
-{ 
-    [mapView addAnnotation:myAnnotation];
-}
-*/
 
 
-/*
-- (void)viewDidAppear
+- (void) viewDidAppear:(BOOL)animated 
 {
-    [_mapView startCamera];
+	[super viewDidAppear:animated];
+    
+    // start the camera
+    [_mapView.sm3dar startCamera];
+    
+    // bring back the status bar, make it solid black
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
 }
-*/
 
 
 /*
@@ -424,12 +672,10 @@
         pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     }
     
-    // CODE HERE IS NOT EXECUTING - CONTROL CONNECT TO STORYBOARD MAY BE THE ISSUE
-    
     // change pin color to purple
     pin.pinColor = MKPinAnnotationColorPurple;
     
-    // animate pin drop (does not work - iOS SDK 5.0 change/Storyboard compatible?)
+    // animate pin drop
     pin.animatesDrop = YES;
     
     // show information callout when tapped
@@ -446,7 +692,8 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     // annotation is a property of MKAnnotationView; using Marker class as the nnotation
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Detail Button Tapped" message:((CustomAnnotation *)view.annotation).title
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"More Details" 
+                                                    message:((CustomAnnotation *)view.annotation).subtitle
                                                    delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     [alert show];
 }

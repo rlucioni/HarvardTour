@@ -9,13 +9,19 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
-	<array/>
+	<array>
+		<string>HarvardTourIcon.png</string>
+		<string>HarvardTourIcon(.5).png</string>
+	</array>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
-			<array/>
+			<array>
+				<string>HarvardTourIcon.png</string>
+				<string>HarvardTourIcon(.5).png</string>
+			</array>
 			<key>UIPrerenderedIcon</key>
 			<false/>
 		</dict>
