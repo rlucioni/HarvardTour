@@ -32,7 +32,7 @@
     span.latitudeDelta = 0.002;
     span.longitudeDelta = 0.002;
     
-    // define starting point for map (Harvard Yard)
+    // define starting point for map and AR view (Harvard Yard)
     CLLocationCoordinate2D start;
     start.latitude = START_LATITUDE;
     start.longitude = START_LONGITUDE;
