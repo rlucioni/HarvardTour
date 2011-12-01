@@ -410,12 +410,12 @@
 
 
 
-/*
-- (void)viewDidAppear
+- (void) viewDidAppear:(BOOL)animated 
 {
-    [_mapView startCamera];
+	[super viewDidAppear:animated];
+    
+    [_mapView.sm3dar startCamera];
 }
-*/
 
 
 /*

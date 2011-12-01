@@ -34,6 +34,8 @@
 		65B393D114842B050091AE14 /* lib3DAR Fat Binary.webloc in Resources */ = {isa = PBXBuildFile; fileRef = 65B393BD14842B050091AE14 /* lib3DAR Fat Binary.webloc */; };
 		65B393D214842B050091AE14 /* QUICKSTART.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65B393BE14842B050091AE14 /* QUICKSTART.txt */; };
 		65B393D314842B050091AE14 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65B393BF14842B050091AE14 /* README.txt */; };
+		65C58E7B1487358D005C5F7C /* HarvardTourIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65C58E7A1487358D005C5F7C /* HarvardTourIcon.png */; };
+		65C58E7D14873595005C5F7C /* HarvardTourIcon(.5).png in Resources */ = {isa = PBXBuildFile; fileRef = 65C58E7C14873595005C5F7C /* HarvardTourIcon(.5).png */; };
 		65E7856D14808A2E0029C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856C14808A2E0029C348 /* UIKit.framework */; };
 		65E7856F14808A2E0029C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7856E14808A2E0029C348 /* Foundation.framework */; };
 		65E7857114808A2E0029C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7857014808A2E0029C348 /* CoreGraphics.framework */; };
@@ -75,6 +77,8 @@
 		65B393BD14842B050091AE14 /* lib3DAR Fat Binary.webloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lib3DAR Fat Binary.webloc"; sourceTree = "<group>"; };
 		65B393BE14842B050091AE14 /* QUICKSTART.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QUICKSTART.txt; sourceTree = "<group>"; };
 		65B393BF14842B050091AE14 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65C58E7A1487358D005C5F7C /* HarvardTourIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HarvardTourIcon.png; sourceTree = "<group>"; };
+		65C58E7C14873595005C5F7C /* HarvardTourIcon(.5).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HarvardTourIcon(.5).png"; sourceTree = "<group>"; };
 		65E7856814808A2E0029C348 /* HarvardTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarvardTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E7856C14808A2E0029C348 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65E7856E14808A2E0029C348 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -192,6 +196,8 @@
 		65E7855D14808A2E0029C348 = {
 			isa = PBXGroup;
 			children = (
+				65C58E7C14873595005C5F7C /* HarvardTourIcon(.5).png */,
+				65C58E7A1487358D005C5F7C /* HarvardTourIcon.png */,
 				65B393A414842B050091AE14 /* 3DAR SDK v2.1.3 */,
 				65E7857214808A2E0029C348 /* Harvard Tour */,
 				65E7856B14808A2E0029C348 /* Frameworks */,
@@ -321,6 +327,8 @@
 				65B393D314842B050091AE14 /* README.txt in Resources */,
 				6576880214842BA800CAA112 /* Default.png in Resources */,
 				6576880314842BA800CAA112 /* Default@2x.png in Resources */,
+				65C58E7B1487358D005C5F7C /* HarvardTourIcon.png in Resources */,
+				65C58E7D14873595005C5F7C /* HarvardTourIcon(.5).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
