@@ -414,6 +414,30 @@
     dunster.title = @"Dunster House";
     dunster.subtitle = @"Affectionately known as 'Dumpster House'";
         
+    
+    // create location for Claverly Hall
+    CLLocationCoordinate2D clavLocation;
+    clavLocation.latitude = 42.37205970137407;
+    clavLocation.longitude = -71.11766695976257;
+    
+    // create annotation for Claverly Hall
+    CustomAnnotation *clav = [[CustomAnnotation alloc] initWithCoordinate:clavLocation];
+    clav.title = @"Claverly Hall";
+    clav.subtitle = @"Part of Adams House";
+    
+    // create location for Randolph Hall
+    CLLocationCoordinate2D randolphLocation;
+    randolphLocation.latitude = 42.37178228049798;
+    randolphLocation.longitude = -71.11717343330383;
+    
+    // create annotation for Claverly Hall
+    CustomAnnotation *randolph = [[CustomAnnotation alloc] initWithCoordinate:randolphLocation];
+    randolph.title = @"Randolph Hall";
+    randolph.subtitle = @"Part of Adams House";
+    
+    
+    
+    
     // add annotations to map
     [self.mapView addAnnotation:statue];
     [self.mapView addAnnotation:hollis];
@@ -447,6 +471,8 @@
     [self.mapView addAnnotation:sever];
     [self.mapView addAnnotation:emerson];
     [self.mapView addAnnotation:dunster];
+    [self.mapView addAnnotation:clav];
+    [self.mapView addAnnotation:randolph];
 }
 
 
