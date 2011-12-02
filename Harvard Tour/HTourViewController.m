@@ -102,7 +102,7 @@
      // create annotation for Canaday
      CustomAnnotation *canaday = [[CustomAnnotation alloc] initWithCoordinate:canadayLocation];
      canaday.title = @"Canaday";
-     canaday.subtitle = @"The worst dorm. Shaped like a question mark.";
+     canaday.subtitle = @"Canaday Hall, completed in 1974, is the newest dormitory in Harvard Yard, historical home of Harvard College freshmen for their first year in residence upon their initial arrival in Cambridge.Canaday's architecture can be traced back to its period of construction, which immediately followed the student takeover of University Hall in 1969.[1] Fearing further student unrest, College administrators fireproofed Canaday and reconfigured it around stairwells to foil student organizing.Past residents include Paul Wylie, David Sacks, Ben Mezrich, Mira Sorvino, Sean Gullette, and Charles Lane.Past residents include Paul Wylie, David Sacks, Ben Mezrich, Mira Sorvino, Sean Gullette, and Charles Lane.";
      
      // create location for Hollis
      CLLocationCoordinate2D hollisLocation;
@@ -122,7 +122,7 @@
      // create annotation for John Harvard statue
      CustomAnnotation *statue = [[CustomAnnotation alloc] initWithCoordinate:statueLocation];
      statue.title = @"John Harvard statue";
-     statue.subtitle = @"A Puritan minister (c. 1630)";
+     statue.subtitle = @"John Harvard was not, as often said, the founder of Harvard College, though he was its first benefactor. The childless Harvard, who had inherited considerable sums from his father, mother, and brother, bequeathed £780 (half of his monetary estate) as well as (perhaps more importantly) his 400-volume library to what had been called the New College—which was soon renamed Harvard College.";
      
      // create location for Stoughton
      CLLocationCoordinate2D stoughtonLocation;
@@ -132,7 +132,7 @@
      // create annotation for Stoughton
      CustomAnnotation *stoughton = [[CustomAnnotation alloc] initWithCoordinate:stoughtonLocation];
      stoughton.title = @"Stoughton";
-     stoughton.subtitle = @"Hollis' twin dorm";
+    stoughton.subtitle = @"Stoughton Hall Designed by Charles Bulfinch in 1804 is one of the dormitories housing first-year students at Harvard College. It is located in Harvard Yard. The rooms are spacious doubles. Past residents include Oliver Wendell Holmes, Sydney Schanberg, Horatio Alger, John Berendt, Amy Brenneman, Edward Everett, Michael Balchan, James Cushing Bayley V, Edward Zwick, Arne Duncan, and Paul Attanasio. ";
      
      // create location for Middle Wigg
      CLLocationCoordinate2D wiggmidLocation;
@@ -142,7 +142,7 @@
      // create annotation for Middle Wigg
      CustomAnnotation *wiggmid = [[CustomAnnotation alloc] initWithCoordinate:wiggmidLocation];
      wiggmid.title = @"Middle Wigglesworth";
-     wiggmid.subtitle = @"Middle Wigglesworth is the best! ";
+    wiggmid.subtitle = @"Wigglesworth Hall is the second-largest of the dormitories housing first-year students at Harvard College. It was constructed in 1931, its location was part of President Lowell's plan to enclose the Yard from the traffic of Harvard Square. The dorm is actually disconnected, and consists of three buildings:  This is Middle-Wigg. Interestingly enough, the entire dorm building also tends to vibrate whenever the nearby train passes by. Past residents include Bill Gates, Sen. Lee E. Rosenthal , Ted Kennedy, Leonard Bernstein, John Lithgow, Robert Lowell, Benjamin C. Bradlee, Sen. David Vitter, Pat Toomey, Andre Gregory, Mark Danner, Donald P. Hodel, Naomi Yang, NPR's Melissa Block, and Jared Diamond. ";
      
      // create location for Big Wigg
      CLLocationCoordinate2D wiggbigLocation;
@@ -152,7 +152,7 @@
      // create annotation for Big Wigg
      CustomAnnotation *wiggbig = [[CustomAnnotation alloc] initWithCoordinate:wiggbigLocation];
      wiggbig.title = @"Big Wigglesworth";
-     wiggbig.subtitle = @"Not as cool as mid wigg";
+     wiggbig.subtitle = @"Wigglesworth Hall is the second-largest of the dormitories housing first-year students at Harvard College. It was constructed in 1931, its location was part of President Lowell's plan to enclose the Yard from the traffic of Harvard Square. The dorm is actually disconnected, and consists of three buildings:  This is Big-Wigg. Interestingly enough, the entire dorm building also tends to vibrate whenever the nearby train passes by. Past residents include Bill Gates, Sen. Lee E. Rosenthal , Ted Kennedy, Leonard Bernstein, John Lithgow, Robert Lowell, Benjamin C. Bradlee, Sen. David Vitter, Pat Toomey, Andre Gregory, Mark Danner, Donald P. Hodel, Naomi Yang, NPR's Melissa Block, and Jared Diamond. ";
      
      // create location for Small Wigg
      CLLocationCoordinate2D wiggsmallLocation;
@@ -162,7 +162,7 @@
      // create annotation for Small Wigg
      CustomAnnotation *wiggsmall = [[CustomAnnotation alloc] initWithCoordinate:wiggsmallLocation];
      wiggsmall.title = @"Small Wigglesworth";
-     wiggsmall.subtitle = @"It's Tiny! ";
+     wiggsmall.subtitle = @"Wigglesworth Hall is the second-largest of the dormitories housing first-year students at Harvard College. It was constructed in 1931, its location was part of President Lowell's plan to enclose the Yard from the traffic of Harvard Square. The dorm is actually disconnected, and consists of three buildings:  This is Small-Wigg. Interestingly enough, the entire dorm building also tends to vibrate whenever the nearby train passes by. Past residents include Bill Gates, Sen. Lee E. Rosenthal , Ted Kennedy, Leonard Bernstein, John Lithgow, Robert Lowell, Benjamin C. Bradlee, Sen. David Vitter, Pat Toomey, Andre Gregory, Mark Danner, Donald P. Hodel, Naomi Yang, NPR's Melissa Block, and Jared Diamond.  ";
      
      // create location for Lamont 
      CLLocationCoordinate2D lamontLocation;
@@ -172,7 +172,7 @@
      // create annotation for Lamont
      CustomAnnotation *lamont = [[CustomAnnotation alloc] initWithCoordinate:lamontLocation];
      lamont.title = @"Lamont Library";
-     lamont.subtitle = @"Not as cool as mid wigg";
+    lamont.subtitle = @"Lamont Library is one of the primary buildings of the library system of Harvard University, located in the south-east corner of Harvard Yard. It was the first library at Harvard designed primarily for undergraduate students at Harvard College, to relieve pressure in the main Widener Library. It was opened in 1949 and named for its principal donor, Harvard alumnus Thomas W. Lamont.Lamont Library contains the main collections for the undergraduate curriculum in the humanities and social sciences";
      
      // create location for Houghton
      CLLocationCoordinate2D houghtonLocation;
@@ -182,7 +182,7 @@
      // create annotation for Houghton
      CustomAnnotation *houghton = [[CustomAnnotation alloc] initWithCoordinate:houghtonLocation];
      houghton.title = @"Houghton Library";
-     houghton.subtitle = @"Not as cool as mid wigg";
+     houghton.subtitle = @"Houghton Library is the primary repository for rare books and manuscripts at Harvard University. It is part of the Harvard College Library within the Harvard Faculty of Arts and Sciences.Houghton holds collections of papers of Samuel Johnson, Emily Dickinson, Henry Wadsworth Longfellow, Margaret Fuller, John Keats, Gore Vidal, Ralph Waldo Emerson and his family, Bronson Alcott and his daughter Louisa May Alcott, along with the papers of other notable transcendentalists, Theodore Roosevelt, T.S. Eliot, E.E. Cummings, Henry James, William James, James Joyce, John Updike and many others.";
      
      // create location for Loeb
      CLLocationCoordinate2D loebLocation;
@@ -212,7 +212,7 @@
      // create annotation for Widener
      CustomAnnotation *widener = [[CustomAnnotation alloc] initWithCoordinate:widenerLocation];
      widener.title = @"Widener Library";
-     widener.subtitle = @"Not as cool as mid wigg";
+     widener.subtitle = @"The Harry Elkins Widener Memorial Library, commonly known as Widener Library, is the primary building of the library system of Harvard University. Widener serves as the centerpiece of the 15.6 million-volume Harvard University Library system, the largest university library system in the world. The 320,000-square-foot Beaux-Arts brick building houses 57 miles (92 km) of bookshelves and 3 million volumes. Among them is one of the few remaining perfect copies of the Gutenberg Bible.";
      
      // create location for Wadsworth
      CLLocationCoordinate2D wadLocation;
@@ -222,7 +222,7 @@
      // create annotation for Wadsworth
      CustomAnnotation *wad = [[CustomAnnotation alloc] initWithCoordinate:wadLocation];
      wad.title = @"Wadsworth Hall";
-     wad.subtitle = @"Not as cool as mid wigg";
+     wad.subtitle = @"Houses the headquarters of the Harvard Alumni Association and the university library system. ";
      
      // create location for Grays
      CLLocationCoordinate2D graysLocation;
@@ -232,7 +232,7 @@
      // create annotation for Grays
      CustomAnnotation *grays = [[CustomAnnotation alloc] initWithCoordinate:graysLocation];
      grays.title = @"Grays House";
-     grays.subtitle = @"Not as cool as mid wigg";
+     grays.subtitle = @"Grays Hall opened in Harvard Yard in 1863 and became Harvard College's first building with water taps in the basement. Residents of other buildings in Harvard Yard had to haul water from pumps in the Yard.Past residents include Norman Mailer, Harpoon Brewery co-founder Daniel Kenary, Natalie Portman, Frank Rich, Jeff Bingaman, Mo Rocca, Michael Weishan, and John Weidman.";
      
      // create location for Dudley
      CLLocationCoordinate2D dudleyLocation;
@@ -242,7 +242,7 @@
      // create annotation for Dudley
      CustomAnnotation *dudley = [[CustomAnnotation alloc] initWithCoordinate:dudleyLocation];
      dudley.title = @"Dudley House";
-     dudley.subtitle = @"Not as cool as mid wigg";
+    dudley.subtitle = @"Dudley House is one of the thirteen undergraduate houses within Harvard College, serving the very few Harvard undergraduates not living in one of the other twelve (residential) houses; this includes student's living in the off-campus Dudley Co-ops. It also serves certain graduate students.Dudley House is named for Thomas Dudley, who signed the charter of Harvard College as Governor of the Massachusetts Bay Colony.";
      
      // create location for Strauss
      CLLocationCoordinate2D straussLocation;
@@ -252,7 +252,7 @@
      // create annotation for Strauss
      CustomAnnotation *strauss = [[CustomAnnotation alloc] initWithCoordinate:straussLocation];
      strauss.title = @"Strauss House";
-     strauss.subtitle = @"Not as cool as mid wigg";
+    strauss.subtitle = @"Straus Hall is one of the undergraduate dormitories housing first-year students at Harvard University. It is located in Harvard Yard. Three Harvard brothers built Straus Hall to commemorate their parents, Isidor Straus and Ida Straus, who died on the Titanic. Past residents include William S. Burroughs, David Souter, John Roberts, Phil Bredesen, Tom Ridge, Darren Aronofsky, Soledad O'Brien, Tim Wirth, Joseph Lelyveld and Mark Zuckerberg";
      
      // create location for Matthews
      CLLocationCoordinate2D matthewsLocation;
@@ -262,7 +262,7 @@
      // create annotation for Matthews
      CustomAnnotation *matthews = [[CustomAnnotation alloc] initWithCoordinate:matthewsLocation];
      matthews.title = @"Matthews House";
-     matthews.subtitle = @"Matthews Hall is one of the dormitories housing first-year students at Harvard College. It is located in the southwest portion of Harvard Yard. It was constructed in 1871 at a cost of $115,000";
+     matthews.subtitle = @"Matthews Hall is one of the dormitories housing first-year students at Harvard College. It is located in the southwest portion of Harvard Yard. It was constructed in 1871 at a cost of $115,000. Past residents include Matt Damon, Robert Rubin, Chuck Schumer, Barney Frank, William Randolph Hearst, Mark Penn, and John Dos Passos.";
      
      // create location for Mass Hall
      CLLocationCoordinate2D masshallLocation;
@@ -272,7 +272,7 @@
      // create annotation for Mass Hall
      CustomAnnotation *masshall = [[CustomAnnotation alloc] initWithCoordinate:masshallLocation];
      masshall.title = @"Massachusets Hall";
-     masshall.subtitle = @"Not as cool as mid wigg";
+     masshall.subtitle = @"Massachusetts Hall — The oldest surviving building at Harvard and the country’s oldest dormitory. While the building was designed by two Harvard Presidents, John Leverett and Benjamin Wadsworth, between 1718 and 1720 for the housing of 64 students, the building has since been given various roles – as a refuge for American soldiers during the Siege of Boston, as well as an observatory when Thomas Hollis donated a 24-foot telescope to the university in 1722. Today, it serves as office space for the most significant administrators at Harvard, including the President, as well as home to a handful of lucky freshmen. Five founding fathers lived here."; 
      
      // create location for Weld
      CLLocationCoordinate2D weldLocation;
@@ -282,7 +282,7 @@
      // create annotation for Weld
      CustomAnnotation *weld = [[CustomAnnotation alloc] initWithCoordinate:weldLocation];
      weld.title = @"Weld House";
-     weld.subtitle = @"Not as cool as mid wigg";
+    weld.subtitle = @"Weld Hall, built in 1870, was the second of two important additions to the Harvard campus designed by the architectural firm Ware & Van Brunt (the first being Memorial Hall). Although originally divided into North and South entryway.The building was a gift of William Fletcher Weld in memory of his brother Stephen Minot Weld. Weld Hall represented a new trend toward picturesque silhouettes that became important to American domestic architecture of the later nineteenth century, as can be seen in the Queen Anne style which was popular during the same period. Past residents include John F. Kennedy, Michael Kinsley, Michael Crichton, Daniel Ellsberg, Christopher Durang, Douglas J. Feith, Neil H. McElroy, Ben Bernanke and Douglas Kenney.";
      
      // create location for University Hall
      CLLocationCoordinate2D univLocation;
@@ -292,7 +292,7 @@
      // create annotation for University Hall
      CustomAnnotation *univ = [[CustomAnnotation alloc] initWithCoordinate:univLocation];
      univ.title = @"University Hall";
-     univ.subtitle = @"Not as cool as mid wigg";
+     univ.subtitle = @"Designed by noted early American architect Charles Bulfinch, University Hall is now a National Historic Landmark. University Hall's first floor contained the College Commons (dining room) until 1849, now it is home to a host of Administrative departments";
      
      // create location for Harvard Hall
      CLLocationCoordinate2D hhallLocation;
@@ -302,7 +302,7 @@
      // create annotation for Harvard Hall
      CustomAnnotation *hhall = [[CustomAnnotation alloc] initWithCoordinate:hhallLocation];
      hhall.title = @"Harvard Hall";
-     hhall.subtitle = @"Not as cool as mid wigg";
+     hhall.subtitle = @"The original Harvard Hall burned in 1764. The current building is home to several classrooms and lecture halls.";
      
      // create location for Lionel
      CLLocationCoordinate2D lionelLocation;
@@ -312,7 +312,7 @@
      // create annotation for Lionel
      CustomAnnotation *lionel = [[CustomAnnotation alloc] initWithCoordinate:lionelLocation];
      lionel.title = @"Lionel House";
-     lionel.subtitle = @"Not as cool as mid wigg";
+     lionel.subtitle = @"Lionel Hall — Located in Harvard Yard, Mower Hall's twin. Tucked away in a corner of the Old Yard, Lionel, like Mower, is small, homey, and has fantastic rooms. Lionel Hall is a memorial to Lionel deJersey, the only relative of John Harvard to attend Harvard. Also like Mower, Lionel has suites that house three or four freshmen, and all suites have bathrooms. Past residents include Peter Benchley, Erich Segal, Lou Dobbs, Grover Norquist, Kevin Kallaugher and Endicott Peabody.";
      
      // create location for Holden Chapel
      CLLocationCoordinate2D holdenLocation;
@@ -322,7 +322,7 @@
      // create annotation for Holden Chapel
      CustomAnnotation *holden = [[CustomAnnotation alloc] initWithCoordinate:holdenLocation];
      holden.title = @"Holden Chapel";
-     holden.subtitle = @"Not as cool as mid wigg";
+     holden.subtitle = @"Used for religious services and guest lectures";
      
      // create location for Mower
      CLLocationCoordinate2D mowerLocation;
@@ -332,7 +332,7 @@
      // create annotation for Mower
      CustomAnnotation *mower = [[CustomAnnotation alloc] initWithCoordinate:mowerLocation];
      mower.title = @"Mower Hall";
-     mower.subtitle = @"Not as cool as mid wigg";
+     mower.subtitle = @"Mower Hall — Located in Harvard Yard, Lionel Hall's twin. Mower has suites that house three or four freshmen, and all suites have bathrooms. Past residents include Al Gore, Tommy Lee Jones, Bob Somerby, Al Franken, Edward Gorey, Arthur Kopit, Mir Murtaza Bhutto, Thomas Oliphant, Timothy Crouse and Charles Murray.";
      
      // create location for PBHA
      CLLocationCoordinate2D pbhaLocation;
@@ -341,8 +341,8 @@
      
      // create annotation for PBHA
      CustomAnnotation *pbha = [[CustomAnnotation alloc] initWithCoordinate:pbhaLocation];
-     pbha.title = @"Loeb Building";
-     pbha.subtitle = @"Not as cool as mid wigg";
+     pbha.title = @"Phillips Brooks House";
+     pbha.subtitle = @"Phillips Brooks House Association (PBHA) is a student-run, staff supported public service/social action organization at Harvard College providing a variety of services to the Greater Boston community. PBHA programs effect social change through service and activism in partnership with local communities. Designed by Alexander Wadsworth Longfellow, Jr";
      
      // create location for Holworthy
      CLLocationCoordinate2D holworthyLocation;
@@ -352,7 +352,7 @@
      // create annotation for Holworthy
      CustomAnnotation *holworthy = [[CustomAnnotation alloc] initWithCoordinate:holworthyLocation];
      holworthy.title = @"Holworthy Hall";
-     holworthy.subtitle = @"Not as cool as mid wigg";
+     holworthy.subtitle = @"Holworthy was founded in 1812 and was named after Sir Matthew Holworthy, a wealthy merchant, who made what was at the time the largest donation to Harvard in the university's history. Holworthy is a first-year dormitory at Harvard College and is located in Harvard Yard. Past occupants have included Cornel West, Conan O'Brien, and Horatio Alger, Jr..";
      
      // create location for Thayer
      CLLocationCoordinate2D thayerLocation;
@@ -362,7 +362,7 @@
      // create annotation for Thayer
      CustomAnnotation *thayer = [[CustomAnnotation alloc] initWithCoordinate:thayerLocation];
      thayer.title = @"Thayer Hall";
-     thayer.subtitle = @"Not as cool as mid wigg";
+     thayer.subtitle = @"Thayer Hall is one of the largest freshman dormitories on Harvard Yard. It was at times the home of American actor Jonathan Taylor Thomas and His Royal Highness Crown Prince Hamzah bin al Hussein of Jordan, as well as James Agee, Steve Ballmer, Andy Borowitz, E. E. Cummings, Roy J. Glauber, Walter Isaacson, Perri Klass, Thomas Kuhn, Bernard Francis Law, Jonathan Mostow, Arthur Schlesinger Jr., and Owen Wister.";
      
      // create location for Memorial Church
      CLLocationCoordinate2D churchLocation;
@@ -372,7 +372,7 @@
      // create annotation for Memorial Church
      CustomAnnotation *church = [[CustomAnnotation alloc] initWithCoordinate:churchLocation];
      church.title = @"Memorial church";
-     church.subtitle = @"Not as cool as mid wigg";
+    church.subtitle = @"The current Memorial Church was built in 1932 in honor of the men and women of Harvard University who died in World War I. The names of 373 alumni were engraved within alongside a sculpture named The Sacrifice by Malvina Hoffman. It was dedicated on Armistice Day on November 11, 1932.Since then, other memorials have been established within the building commemorating those Harvardians who later died in World War II, the Korean War, and the Vietnam War.";
      
      // create location for Robinson
      CLLocationCoordinate2D robinsonLocation;
@@ -382,7 +382,7 @@
      // create annotation for Robinson
      CustomAnnotation *robinson = [[CustomAnnotation alloc] initWithCoordinate:robinsonLocation];
      robinson.title = @"Robinson ";
-     robinson.subtitle = @"Not as cool as mid wigg";
+     robinson.subtitle = @"classroom building";
      
      // create location for Sever
      CLLocationCoordinate2D severLocation;
@@ -392,7 +392,7 @@
      // create annotation for Sever
      CustomAnnotation *sever = [[CustomAnnotation alloc] initWithCoordinate:severLocation];
      sever.title = @"Sever Hall";
-     sever.subtitle = @"Not as cool as mid wigg";
+     sever.subtitle = @"Classroom building";
      
      // create location for Emerson
      CLLocationCoordinate2D emersonLocation;
@@ -402,7 +402,7 @@
      // create annotation for Emerson
      CustomAnnotation *emerson = [[CustomAnnotation alloc] initWithCoordinate:emersonLocation];
      emerson.title = @"Emerson Hall";
-     emerson.subtitle = @"Not as cool as mid wigg";
+     emerson.subtitle = @"Classroom building";
 
     // create location for Dunster
     CLLocationCoordinate2D dunsterLocation;
