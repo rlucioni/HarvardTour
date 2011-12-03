@@ -3,7 +3,7 @@ design.txt
 Renzo F Lucioni
 Anuv Ratan
 
-Harvard Tours
+ViewHarvard
 iOS App
 
 Pull out of Tommy's section, "MapKit and Movies"
@@ -11,3 +11,24 @@ Pull out of Tommy's section, "MapKit and Movies"
 CoreLocation and MapKit (Stanford lecture)
 
 3DAR (website)
+
+
+Design Process:
+
+
+
+
+1. Map View
+
+2. Markers
+
+3. 3DAR
+-->
+-->
+
+
+
+
+
+
+
