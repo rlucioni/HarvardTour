@@ -12,23 +12,4 @@ CoreLocation and MapKit (Stanford lecture)
 
 3DAR (website)
 
-
-Design Process:
-
-
-
-
-1. Map View
-
-2. Markers
-
-3. 3DAR
--->
--->
-
-
-
-
-
-
-
+3DAR distills the essential geodata rendering problem into an easy to use programming interface

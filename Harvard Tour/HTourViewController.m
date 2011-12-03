@@ -30,19 +30,22 @@
  * Create an instance of the CLLocationManager
  */
 
-- (void)trackUser
+/*
+ - (void)trackUser
 {
     self.locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [_locationManager startUpdatingLocation];
 }
+*/
 
 
 /*
  * Get the current latitude and longitude using the delegate method
  */
 
+/*
 - (void)locationManager:(CLLocationManager *)manager 
     didUpdateToLocation:(CLLocation *)newLocation 
            fromLocation:(CLLocation *)oldLocation
@@ -50,6 +53,7 @@
     NSLog(@"New latitude: %f", newLocation.coordinate.latitude);
     NSLog(@"New longitude: %f", newLocation.coordinate.longitude);
 }
+*/
 
 #pragma mark - View lifecycle
 
@@ -76,16 +80,20 @@
 }
 
 
+
+/*
+ * Define starting point for AR view (e.g., Harvard Yard); commented out so that AR view initializes to current user location
+ */
+
+/*
 - (void)set3darLocation
 {
-    // define starting point for AR view (e.g., Harvard Yard); commented out so that AR view initializes to current user location
-    /*
     CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:START_LATITUDE longitude:START_LONGITUDE];
     NSLog(@"Moving 3DAR location to %@", startLocation);
     [self.mapView.sm3dar.locationManager stopUpdatingLocation];
     [self.mapView.sm3dar changeCurrentLocation:startLocation];
-    */
 }
+*/
 
 
 - (void)viewDidLoad
@@ -95,7 +103,7 @@
 
 - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
 { 
-     [self set3darLocation];
+     // [self set3darLocation];
  
      // create location for Canaday
      CLLocationCoordinate2D canadayLocation;
@@ -367,7 +375,7 @@
      // create annotation for Thayer
      CustomAnnotation *thayer = [[CustomAnnotation alloc] initWithCoordinate:thayerLocation];
      thayer.title = @"Thayer Hall";
-     thayer.subtitle = @"Thayer Hall is one of the largest freshman dormitories on Harvard Yard. It was at times the home of American actor Jonathan Taylor Thomas and His Royal Highness Crown Prince Hamzah bin al Hussein of Jordan, as well as James Agee, Steve Ballmer, Andy Borowitz, and E. E. Cummings.";
+     thayer.subtitle = @"Thayer Hall is one of the largest freshman dormitories in Harvard Yard. It was at times the home of American actor Jonathan Taylor Thomas and His Royal Highness Crown Prince Hamzah bin al Hussein of Jordan, as well as James Agee, Steve Ballmer, Andy Borowitz, and E. E. Cummings.";
      
      // create location for Memorial Church
      CLLocationCoordinate2D churchLocation;
@@ -376,7 +384,7 @@
      
      // create annotation for Memorial Church
      CustomAnnotation *church = [[CustomAnnotation alloc] initWithCoordinate:churchLocation];
-     church.title = @"Memorial church";
+     church.title = @"Memorial Church";
     church.subtitle = @"The current Memorial Church was built in 1932 in honor of the men and women of Harvard University who died in World War I. The names of 373 alumni were engraved within alongside a sculpture named The Sacrifice by Malvina Hoffman. It was dedicated on Armistice Day on November 11, 1932.";
      
      // create location for Robinson
@@ -386,7 +394,7 @@
      
      // create annotation for Robinson
      CustomAnnotation *robinson = [[CustomAnnotation alloc] initWithCoordinate:robinsonLocation];
-     robinson.title = @"Robinson ";
+     robinson.title = @"Robinson Hall";
      robinson.subtitle = @"Home to multiple classrooms. Home to the history department";
      
      // create location for Sever
@@ -397,7 +405,7 @@
      // create annotation for Sever
      CustomAnnotation *sever = [[CustomAnnotation alloc] initWithCoordinate:severLocation];
      sever.title = @"Sever Hall";
-     sever.subtitle = @"Harvard's main class room building for non science classes. Sever Hall was built from 1878 to 1880 with a gift from Anne Sever in honor of her deceased husband, James Warren Sever. It is now a National Landmark";
+     sever.subtitle = @"Harvard's main class room building for non-science classes. Sever Hall was built from 1878 to 1880 with a gift from Anne Sever in honor of her deceased husband, James Warren Sever. It is now a National Landmark";
      
      // create location for Emerson
      CLLocationCoordinate2D emersonLocation;
@@ -507,20 +515,7 @@
 
 
 /*
- * Executes when user taps a marker in AR view. Shows a callout with information on location tapped.
- */
-
-/* 
-- (void)arCallout
-{
-    [self.mapView.calloutView titleLabel = @"Additional Details"];
-}
-*/
-
-
-
-/*
- * Executes when user taps detail disclosure button in map view. Shows a callout with information on location tapped.
+ * Executes when user taps detail disclosure button in 2D map view. Shows a callout with information on location tapped.
  */
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -532,6 +527,27 @@
     [alert show];
 }
 
+
+/*
+ * Defines an information callout to be displayed in 3D AR view
+ */
+
+- (void)arCallout:(NSString *)msg
+{
+    _mapView.calloutView.titleLabel.text = @"Additional Details";
+    _mapView.calloutView.subtitleLabel.text = msg;
+    _mapView.calloutView.disclosureButton= [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+}
+
+
+/*
+ * Executes when user taps a marker in 3D AR view. Fires a callout with information on location tapped.
+ */
+
+- (void) mapAnnotationView:(MKAnnotationView*)annotationView calloutAccessoryControlTapped:(UIControl*)control 
+{
+    [self arCallout:((CustomAnnotation *)annotationView.annotation).subtitle];
+}
 
 
 - (void)viewDidUnload
