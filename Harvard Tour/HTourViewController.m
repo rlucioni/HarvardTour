@@ -424,13 +424,13 @@
     
     // create location for Memorial Hall
     CLLocationCoordinate2D memHallLocation;
-    memHallLocation.latitude = 42.34745959791106;
-    memHallLocation.longitude = -71.08250856399536;
+    memHallLocation.latitude = 42.375927;
+    memHallLocation.longitude = -71.115236;
     
     // create annotation for Memorial Hall
     CustomAnnotation *memHall = [[CustomAnnotation alloc] initWithCoordinate:memHallLocation];
-    memHall.title = @"Prudential Center";
-    memHall.subtitle = @"The Top of the Hub Restaurant is located at the top of this building.";
+    memHall.title = @"Memorial Hall";
+    memHall.subtitle = @"Memorial Hall was erected in honor of Harvard graduates who fought for the Union in the Civil War. The hall is divided into the 1,166-seat Sanders Theatre, a 9,000 square foot room called Annenberg Hall which serves as a dining hall for all first-year students. Memorial Hall contains the world's second-largest secular stained glass collection.";
     
     
     // add annotations to map
