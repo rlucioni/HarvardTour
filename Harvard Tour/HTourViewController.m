@@ -424,6 +424,17 @@
      emerson.subtitle = @"Home to multiple classrooms. Home to the philosophy department";
     
     
+    // create location for Prudential
+    CLLocationCoordinate2D prudLocation;
+    prudLocation.latitude = 42.34745959791106;
+    prudLocation.longitude = -71.08250856399536;
+    
+    // create annotation for Prudential
+    CustomAnnotation *prud = [[CustomAnnotation alloc] initWithCoordinate:prudLocation];
+    prud.title = @"Prud";
+   prud.subtitle = @"PRUDDDDDDDDDDDD!!!!!!";
+    
+    
     
     
     // add annotations to map
@@ -458,6 +469,7 @@
     [self.mapView addAnnotation:robinson];
     [self.mapView addAnnotation:sever];
     [self.mapView addAnnotation:emerson];
+    [self.mapView addAnnotation:prud];
 
 }
 

@@ -3,7 +3,7 @@ design.txt
 Renzo F Lucioni
 Anuv Ratan
 
-Harvard Tours
+ViewHarvard
 iOS App
 
 Pull out of Tommy's section, "MapKit and Movies"
@@ -11,4 +11,5 @@ Pull out of Tommy's section, "MapKit and Movies"
 CoreLocation and MapKit (Stanford lecture)
 
 3DAR (website)
+
 3DAR distills the essential geodata rendering problem into an easy to use programming interface
