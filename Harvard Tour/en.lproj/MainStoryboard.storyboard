@@ -20,6 +20,13 @@
                                     <outlet property="delegate" destination="2" id="Kg2-lE-vF0"/>
                                 </connections>
                             </mapView>
+                            <navigationBar userInteractionEnabled="NO" contentMode="scaleToFill" id="bzr-ty-hta">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Lift for AR. Lay Flat for Map." id="Y6f-Oe-1cE"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -31,6 +38,21 @@
             <point key="canvasLocation" x="406" y="109"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CLLocationManager" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CLLocationManager.h"/>
+        </class>
+        <class className="HTourViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HTourViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locationManager" candidateClass="CLLocationManager"/>
+                <relationship kind="outlet" name="mapView" candidateClass="SM3DARMapView"/>
+            </relationships>
+        </class>
+        <class className="SM3DARMapView" superclassName="MKMapView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SM3DARMapView.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
