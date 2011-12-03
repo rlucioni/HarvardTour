@@ -46,7 +46,7 @@
     didUpdateToLocation:(CLLocation *)newLocation 
            fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"New latitude: %f", newLocation.coordinate.latitude); // STORE TO A VAR THAT CAN BE USED ELSEWHERE?
+    NSLog(@"New latitude: %f", newLocation.coordinate.latitude);
     NSLog(@"New longitude: %f", newLocation.coordinate.longitude);
 }
 
@@ -77,11 +77,13 @@
 
 - (void)set3darLocation
 {
-    // define starting point for map (Harvard Yard)
+    // define starting point for AR view (e.g., Harvard Yard); commented out so that AR view initializes to current user location
+    /*
     CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:START_LATITUDE longitude:START_LONGITUDE];
     NSLog(@"Moving 3DAR location to %@", startLocation);
     [self.mapView.sm3dar.locationManager stopUpdatingLocation];
     [self.mapView.sm3dar changeCurrentLocation:startLocation];
+    */
 }
 
 
@@ -251,7 +253,7 @@
      
      // create annotation for Strauss
      CustomAnnotation *strauss = [[CustomAnnotation alloc] initWithCoordinate:straussLocation];
-     strauss.title = @"Strauss House";
+     strauss.title = @"Strauss Hall";
     strauss.subtitle = @"Straus Hall is one of the undergraduate dormitories housing first-year students at Harvard University. It is located in Harvard Yard. Three Harvard brothers built Straus Hall to commemorate their parents, Isidor Straus and Ida Straus, who died on the Titanic. Past residents include William S. Burroughs, David Souter, John Roberts, Phil Bredesen, Tom Ridge, Darren Aronofsky, Soledad O'Brien, Tim Wirth, Joseph Lelyveld and Mark Zuckerberg";
      
      // create location for Matthews
@@ -261,7 +263,7 @@
      
      // create annotation for Matthews
      CustomAnnotation *matthews = [[CustomAnnotation alloc] initWithCoordinate:matthewsLocation];
-     matthews.title = @"Matthews House";
+     matthews.title = @"Matthews Hall";
      matthews.subtitle = @"Matthews Hall is one of the dormitories housing first-year students at Harvard College. It is located in the southwest portion of Harvard Yard. It was constructed in 1871 at a cost of $115,000. Past residents include Matt Damon, Robert Rubin, Chuck Schumer, Barney Frank, William Randolph Hearst, Mark Penn, and John Dos Passos.";
      
      // create location for Mass Hall
@@ -281,7 +283,7 @@
      
      // create annotation for Weld
      CustomAnnotation *weld = [[CustomAnnotation alloc] initWithCoordinate:weldLocation];
-     weld.title = @"Weld House";
+     weld.title = @"Weld Hall";
     weld.subtitle = @"Weld Hall, built in 1870, was the second of two important additions to the Harvard campus designed by the architectural firm Ware & Van Brunt (the first being Memorial Hall). Although originally divided into North and South entryway.The building was a gift of William Fletcher Weld in memory of his brother Stephen Minot Weld. Weld Hall represented a new trend toward picturesque silhouettes that became important to American domestic architecture of the later nineteenth century, as can be seen in the Queen Anne style which was popular during the same period. Past residents include John F. Kennedy, Michael Kinsley, Michael Crichton, Daniel Ellsberg, Christopher Durang, Douglas J. Feith, Neil H. McElroy, Ben Bernanke and Douglas Kenney.";
      
      // create location for University Hall
@@ -403,37 +405,6 @@
      CustomAnnotation *emerson = [[CustomAnnotation alloc] initWithCoordinate:emersonLocation];
      emerson.title = @"Emerson Hall";
      emerson.subtitle = @"Classroom building";
-
-    // create location for Dunster
-    CLLocationCoordinate2D dunsterLocation;
-    dunsterLocation.latitude = 42.36868697304995;
-    dunsterLocation.longitude = -71.1159610748291;
-
-    // create annotation for Dunster
-    CustomAnnotation *dunster = [[CustomAnnotation alloc] initWithCoordinate:dunsterLocation];
-    dunster.title = @"Dunster House";
-    dunster.subtitle = @"Affectionately known as 'Dumpster House'";
-        
-    
-    // create location for Claverly Hall
-    CLLocationCoordinate2D clavLocation;
-    clavLocation.latitude = 42.37205970137407;
-    clavLocation.longitude = -71.11766695976257;
-    
-    // create annotation for Claverly Hall
-    CustomAnnotation *clav = [[CustomAnnotation alloc] initWithCoordinate:clavLocation];
-    clav.title = @"Claverly Hall";
-    clav.subtitle = @"Part of Adams House";
-    
-    // create location for Randolph Hall
-    CLLocationCoordinate2D randolphLocation;
-    randolphLocation.latitude = 42.37178228049798;
-    randolphLocation.longitude = -71.11717343330383;
-    
-    // create annotation for Claverly Hall
-    CustomAnnotation *randolph = [[CustomAnnotation alloc] initWithCoordinate:randolphLocation];
-    randolph.title = @"Randolph Hall";
-    randolph.subtitle = @"Part of Adams House";
     
     
     
@@ -470,9 +441,7 @@
     [self.mapView addAnnotation:robinson];
     [self.mapView addAnnotation:sever];
     [self.mapView addAnnotation:emerson];
-    [self.mapView addAnnotation:dunster];
-    [self.mapView addAnnotation:clav];
-    [self.mapView addAnnotation:randolph];
+
 }
 
 
@@ -520,6 +489,7 @@
     
     return pin;
 }
+
 
 
 /*
