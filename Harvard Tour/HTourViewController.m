@@ -101,6 +101,12 @@
     [super viewDidLoad];
 }
 
+
+
+/*
+ * Load points of interest (buildings on the Harvard campus)
+ */
+
 - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
 { 
      // [self set3darLocation];
@@ -470,6 +476,7 @@
 }
 
 
+
 /*
  * Define each annotation
  */
@@ -502,19 +509,6 @@
 }
 
 
-/*
- * Executes when user taps detail disclosure button in 2D map view. Shows a callout with information on location tapped.
- */
-
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
-{
-    // annotation is a property of MKAnnotationView; using Marker class as the annotation
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Additional Details" 
-                                                    message:((CustomAnnotation *)view.annotation).subtitle
-                                                   delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
-    [alert show];
-}
-
 
 /*
  * Defines an information callout to be displayed in 3D AR view
@@ -522,18 +516,56 @@
 
 - (void)arCallout:(NSString *)msg
 {
-    _mapView.calloutView.titleLabel.text = @"Additional Details";
-    _mapView.calloutView.subtitleLabel.text = msg;
-    _mapView.calloutView.disclosureButton= [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    // annotation is a property of MKAnnotationView; using Marker class as the annotation
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Additional Details" 
+                                                    message:msg
+                                                   delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+    [alert show];
 }
 
 
+
 /*
- * Executes when user taps a marker in 3D AR view. Fires a callout with information on location tapped.
+ * Executes when user taps detail disclosure button in 2D map view. Shows a callout with information on location tapped.
+ */
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    [self arCallout:((CustomAnnotation *)view.annotation).subtitle];
+}
+
+
+
+/*
+ * Executes when user changes focus point (i.e., moves camera). Reports to the console, sets callout text.
+ */
+
+- (void) sm3dar:(SM3DARController *)sm3dar didChangeFocusToPOI:(SM3DARPoint*)newPOI fromPOI:(SM3DARPoint*)oldPOI {
+    NSLog(@"didChangeFocusToPOI");
+    sm3dar.focusView.content.text = @"foobar";
+    
+    [sm3dar.focusView addSubview:[UIButton buttonWithType:UIButtonTypeDetailDisclosure]];
+}
+
+
+
+/*
+ * Executes when user taps focus point.
+ */
+
+- (void) sm3dar:(SM3DARController *)sm3dar didChangeSelectionToPOI:(SM3DARPoint*)newPOI fromPOI:(SM3DARPoint*)oldPOI {
+    NSLog(@"didChangeSelectionToPOI");
+}
+
+
+
+/*
+ * Executes when user taps a marker in 3D AR view. Fires a callout with information on location tapped. <-- not responding
  */
 
 - (void) mapAnnotationView:(MKAnnotationView*)annotationView calloutAccessoryControlTapped:(UIControl*)control 
 {
+    NSLog(@"calloutAccessoryControlTapped");
     [self arCallout:((CustomAnnotation *)annotationView.annotation).subtitle];
 }
 
