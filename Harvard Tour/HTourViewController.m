@@ -30,19 +30,22 @@
  * Create an instance of the CLLocationManager
  */
 
-- (void)trackUser
+/*
+ - (void)trackUser
 {
     self.locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [_locationManager startUpdatingLocation];
 }
+*/
 
 
 /*
  * Get the current latitude and longitude using the delegate method
  */
 
+/*
 - (void)locationManager:(CLLocationManager *)manager 
     didUpdateToLocation:(CLLocation *)newLocation 
            fromLocation:(CLLocation *)oldLocation
@@ -50,6 +53,7 @@
     NSLog(@"New latitude: %f", newLocation.coordinate.latitude);
     NSLog(@"New longitude: %f", newLocation.coordinate.longitude);
 }
+*/
 
 #pragma mark - View lifecycle
 
@@ -76,16 +80,20 @@
 }
 
 
+
+/*
+ * Define starting point for AR view (e.g., Harvard Yard); commented out so that AR view initializes to current user location
+ */
+
+/*
 - (void)set3darLocation
 {
-    // define starting point for AR view (e.g., Harvard Yard); commented out so that AR view initializes to current user location
-    /*
     CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:START_LATITUDE longitude:START_LONGITUDE];
     NSLog(@"Moving 3DAR location to %@", startLocation);
     [self.mapView.sm3dar.locationManager stopUpdatingLocation];
     [self.mapView.sm3dar changeCurrentLocation:startLocation];
-    */
 }
+*/
 
 
 - (void)viewDidLoad
@@ -95,7 +103,7 @@
 
 - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
 { 
-     [self set3darLocation];
+     // [self set3darLocation];
  
      // create location for Canaday
      CLLocationCoordinate2D canadayLocation;
@@ -495,20 +503,7 @@
 
 
 /*
- * Executes when user taps a marker in AR view. Shows a callout with information on location tapped.
- */
-
-/* 
-- (void)arCallout
-{
-    [self.mapView.calloutView titleLabel = @"Additional Details"];
-}
-*/
-
-
-
-/*
- * Executes when user taps detail disclosure button in map view. Shows a callout with information on location tapped.
+ * Executes when user taps detail disclosure button in 2D map view. Shows a callout with information on location tapped.
  */
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -520,6 +515,27 @@
     [alert show];
 }
 
+
+/*
+ * Defines an information callout to be displayed in 3D AR view
+ */
+
+- (void)arCallout:(NSString *)msg
+{
+    _mapView.calloutView.titleLabel.text = @"Additional Details";
+    _mapView.calloutView.subtitleLabel.text = msg;
+    _mapView.calloutView.disclosureButton= [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+}
+
+
+/*
+ * Executes when user taps a marker in 3D AR view. Fires a callout with information on location tapped.
+ */
+
+- (void) mapAnnotationView:(MKAnnotationView*)annotationView calloutAccessoryControlTapped:(UIControl*)control 
+{
+    [self arCallout:((CustomAnnotation *)annotationView.annotation).subtitle];
+}
 
 
 - (void)viewDidUnload
