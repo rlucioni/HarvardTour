@@ -495,16 +495,15 @@
 
 
 /*
- * Executes when user taps detail disclosure button in map view. Shows a callout with information on location tapped.
+ * Executes when user taps a marker in AR view. Shows a callout with information on location tapped.
  */
 
+/* 
 - (void)arCallout
 {
-    _mapView.calloutView.titleLabel = @"Additional Details";
-    _mapView.calloutView.subtitleLabel = ((CustomAnnotation *)view.annotation).subtitle;
-    
-    
+    [self.mapView.calloutView titleLabel = @"Additional Details"];
 }
+*/
 
 
 
