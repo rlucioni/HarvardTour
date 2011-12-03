@@ -432,6 +432,15 @@
     memHall.title = @"Memorial Hall";
     memHall.subtitle = @"Memorial Hall was erected in honor of Harvard graduates who fought for the Union in the Civil War. The hall is divided into the 1,166-seat Sanders Theatre, a 9,000 square foot room called Annenberg Hall which serves as a dining hall for all first-year students. Memorial Hall contains the world's second-largest secular stained glass collection.";
     
+    // create location for Science Center
+    CLLocationCoordinate2D sciCenterLocation;
+    sciCenterLocation.latitude = 42.376403159874585;
+    sciCenterLocation.longitude = -71.11664772033691;
+    
+    // create annotation for Science Center
+    CustomAnnotation *sciCenter = [[CustomAnnotation alloc] initWithCoordinate:sciCenterLocation];
+    sciCenter.title = @"Science Center";
+    sciCenter.subtitle = @"Built in 1973, this is where undergraduate science and mathematics are taught. The building was designed in the brutalist style by Josep Lluis Sert, dean of the Graduate School of Design at the time, and financed by Edwin Land, who invented the camera. Some say the building was designed to resemble a Polaroid camera. The building houses two telescopes, a cafeteria, and a museum.";
     
     // add annotations to map
     [self.mapView addAnnotation:statue];
@@ -466,6 +475,7 @@
     [self.mapView addAnnotation:sever];
     [self.mapView addAnnotation:emerson];
     [self.mapView addAnnotation:memHall];
+    [self.mapView addAnnotation:sciCenter];
 }
 
 
