@@ -229,7 +229,7 @@
      // create annotation for Widener
      CustomAnnotation *widener = [[CustomAnnotation alloc] initWithCoordinate:widenerLocation];
      widener.title = @"Widener Library";
-     widener.subtitle = @"The largest library at Harvard, Widener is the center of Harvard University Library system, the largest university library system in the world. In memory of her son, Harry, who died on the Titanic in 1912, Eleanor Elkins Widener donated $3.5 million for the creation of the library, which opened in 1915. Widener holds more than 5.7 million volumes on more than 50 miles of shelves. By the 1930s the library found itself filled to capacity, which led to the creation of smaller libraries to hold specialized collections.";
+     widener.subtitle = @"The largest library at Harvard, Widener is the center of the Harvard University Library system, the largest university library system in the world. In memory of her son, Harry, who died on the Titanic in 1912, Eleanor Elkins Widener donated $3.5 million for the creation of the library, which opened in 1915. Widener holds more than 5.7 million volumes on more than 50 miles of shelves. By the 1930s the library found itself filled to capacity, which led to the creation of smaller libraries to hold specialized collections.";
      
      // create location for Wadsworth
      CLLocationCoordinate2D wadLocation;
