@@ -500,6 +500,11 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
+    // check if current annotation is the user's location
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        // if annotation is of type MKUserLocation, returning nothing tells map view to draw default view (blue dot)
+        return nil;
+    
     // attempt to re-use pin annotation view
     MKPinAnnotationView *pin = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Marker"];
     
