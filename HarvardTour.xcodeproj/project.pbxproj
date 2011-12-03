@@ -234,8 +234,8 @@
 				65E7857E14808A2E0029C348 /* MainStoryboard.storyboard */,
 				65E7858114808A2E0029C348 /* HTourViewController.h */,
 				65E7858214808A2E0029C348 /* HTourViewController.m */,
-				652E9E781481B84C00C3793A /* CustomAnnotation.m */,
 				652E9E791481B84C00C3793A /* CustomAnnotation.h */,
+				652E9E781481B84C00C3793A /* CustomAnnotation.m */,
 				65E7857314808A2E0029C348 /* Supporting Files */,
 			);
 			path = "Harvard Tour";

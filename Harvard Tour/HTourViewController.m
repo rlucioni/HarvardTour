@@ -14,6 +14,7 @@
 
 @implementation HTourViewController
 
+
 @synthesize mapView=_mapView;
 @synthesize locationManager=_locationManager;
 
@@ -491,9 +492,22 @@
 }
 
 
+/*
+ * Executes when user taps detail disclosure button in map view. Shows a callout with information on location tapped.
+ */
+
+- (void)arCallout
+{
+    _mapView.calloutView.titleLabel = @"Additional Details";
+    _mapView.calloutView.subtitleLabel = ((CustomAnnotation *)view.annotation).subtitle;
+    
+    
+}
+
+
 
 /*
- * Executes when user taps detail disclosure button. Shows pop-up of location tapped.
+ * Executes when user taps detail disclosure button in map view. Shows a callout with information on location tapped.
  */
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -504,6 +518,8 @@
                                                    delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     [alert show];
 }
+
+
 
 - (void)viewDidUnload
 {
