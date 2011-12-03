@@ -202,8 +202,8 @@
      
      // create annotation for Loeb
      CustomAnnotation *loeb = [[CustomAnnotation alloc] initWithCoordinate:loebLocation];
-     loeb.title = @"Loeb Building";
-     loeb.subtitle = @"Not as cool as mid wigg";
+     loeb.title = @"Loeb House";
+    loeb.subtitle = @" For many years the residence of Harvard presidents, Loeb House today is the home of Harvard’s Governing Boards and their administrative offices.The first floor is decorated in the 19th century style, forming an elegant, light-filled backdrop for special occasions including weddings and reunions, as well as meetings and conferences.";
      
      // create location for Boylston
      CLLocationCoordinate2D boylstonLocation;
@@ -213,7 +213,7 @@
      // create annotation for Boylston
      CustomAnnotation *boylston = [[CustomAnnotation alloc] initWithCoordinate:boylstonLocation];
      boylston.title = @"Boylston Hall";
-     boylston.subtitle = @"Not as cool as mid wigg";
+     boylston.subtitle = @"Home to the Romance Languages Department. Built in 1859.";
      
      // create location for Widener
      CLLocationCoordinate2D widenerLocation;
@@ -395,7 +395,7 @@
      // create annotation for Robinson
      CustomAnnotation *robinson = [[CustomAnnotation alloc] initWithCoordinate:robinsonLocation];
      robinson.title = @"Robinson ";
-     robinson.subtitle = @"classroom building";
+     robinson.subtitle = @"Home to multiple classrooms. Home to the history department";
      
      // create location for Sever
      CLLocationCoordinate2D severLocation;
@@ -405,7 +405,7 @@
      // create annotation for Sever
      CustomAnnotation *sever = [[CustomAnnotation alloc] initWithCoordinate:severLocation];
      sever.title = @"Sever Hall";
-     sever.subtitle = @"Classroom building";
+     sever.subtitle = @"Harvard's main class room building for non science classes. Sever Hall was built from 1878 to 1880 with a gift from Anne Sever in honor of her deceased husband, James Warren Sever. It is now a National Landmark";
      
      // create location for Emerson
      CLLocationCoordinate2D emersonLocation;
@@ -415,7 +415,7 @@
      // create annotation for Emerson
      CustomAnnotation *emerson = [[CustomAnnotation alloc] initWithCoordinate:emersonLocation];
      emerson.title = @"Emerson Hall";
-     emerson.subtitle = @"Classroom building";
+     emerson.subtitle = @"Home to multiple classrooms. Home to the philosophy department";
     
     
     
