@@ -533,7 +533,7 @@
 
 
 /*
- * Defines an information callout to be displayed in 3D AR view
+ * Defines an information callout to be displayed in 3D AR view. Not fully functional.
  */
 
 - (void)arCallout:(NSString *)msg
@@ -559,14 +559,19 @@
 
 
 /*
- * Executes when user changes focus point (i.e., moves camera). Reports to the console, sets callout text.
+ * Executes when user changes focus point (i.e., moves camera). Reports to the console, should set callout text.
  */
 
-- (void) sm3dar:(SM3DARController *)sm3dar didChangeFocusToPOI:(SM3DARPoint*)newPOI fromPOI:(SM3DARPoint*)oldPOI {
+- (void) sm3dar:(SM3DARController *)sm3dar didChangeFocusToPOI:(SM3DARPoint*)newPOI fromPOI:(SM3DARPoint*)oldPOI 
+{
+    // report to console
     NSLog(@"didChangeFocusToPOI");
-    sm3dar.focusView.content.text = @"foobar";
     
-    [sm3dar.focusView addSubview:[UIButton buttonWithType:UIButtonTypeDetailDisclosure]];
+    // change callout text - does not work
+    // sm3dar.focusView.content.text = @"foobar";
+    
+    // add a detail disclosure button to the AR callout - does not work
+    // [sm3dar.focusView addSubview:[UIButton buttonWithType:UIButtonTypeDetailDisclosure]];
 }
 
 
@@ -575,7 +580,8 @@
  * Executes when user taps focus point.
  */
 
-- (void) sm3dar:(SM3DARController *)sm3dar didChangeSelectionToPOI:(SM3DARPoint*)newPOI fromPOI:(SM3DARPoint*)oldPOI {
+- (void) sm3dar:(SM3DARController *)sm3dar didChangeSelectionToPOI:(SM3DARPoint*)newPOI fromPOI:(SM3DARPoint*)oldPOI 
+{
     sm3dar.focusView.content.text = @"foobar";
     
     NSLog(@"didChangeSelectionToPOI");
@@ -584,7 +590,7 @@
 
 
 /*
- * Executes when user taps a marker in 3D AR view. Fires a callout with information on location tapped. <-- not responding
+ * Executes when user taps a marker in 3D AR view. Fires a callout with information on location tapped. Not fully functional.
  */
 
 - (void) mapAnnotationView:(MKAnnotationView*)annotationView calloutAccessoryControlTapped:(UIControl*)control 

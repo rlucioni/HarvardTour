@@ -3,13 +3,168 @@ design.txt
 Renzo F Lucioni
 Anuv Ratan
 
-ViewHarvard
+HarvardTour
 iOS App
 
-Pull out of Tommy's section, "MapKit and Movies"
 
-CoreLocation and MapKit (Stanford lecture)
 
-3DAR (website)
+The HarvardTour app consists of two main components: a 2D map view and a 3D 
+augmented reality (AR) view. The inner workings of each of these pieces and the 
+design decisions associated with their development are explained in-depth below. 
 
-3DAR distills the essential geodata rendering problem into an easy to use programming interface
+2D Map View
+
+One of the app's key features is the 2D map view with detailed annotations for
+buildings within Harvard Yard which appears when the device running the app is
+laid flat. This map was implemented using the MapKit framework in combination
+with custom annotations.
+
+MapKit allows a scrollable, zoomable Google Map complete with Map, Satellite, 
+and Hybrid views to be displayed within a Map View object. This map functionaliy
+is defined in MapKit/MapKit.h, a file imported to the project wherever mapping 
+features are required. The MapKit framework was also added to the project, as by
+selecting the project, selecting Build Phases, then expanding Link Binary with 
+Libraries and adding the MapKit framework. Adding this framework simply amounted 
+to adding in the binaries that need to be linked to when compiling the app. The 
+MapKit/MapKit.h file defines the functions that are available while the MapKit 
+framework defines and implements these functions.
+
+Now, when a MapKit is loaded it displays the whole world. However, considering 
+the purpose of this app, it would be preferable to start the map view somewhere 
+in particular, such as Harvard Yard. The setMapRegion function in the 
+HTourViewController takes care of this by defining a starting point and span for 
+the initial map view, and then combines these to define a starting region for 
+the MapKit to display. The starting point (CLLocationCoordinate2D) is just that: 
+a point around which the map should center when it first displays. The 
+coordinate span (MKCoordinateSpan) defines the map view's initial "zoom level": 
+how much area surrounding the initial starting point should be shown when the 
+map is first displayed. Its two properties, latitudeDelta and longitudeDelta - 
+accessed via the dot operator, since MKCoordinateSpan, like 
+CLLocationCoordinate2D, is a struct - define how many degrees of latitude and 
+longitude to initially display. (Both a latitude and a longitude need to be 
+specified to account for device orientation.) From the span and starting point, 
+a coordinate region (MKCoordinateRegion), the area to be displayed by the map 
+when it first displays, is defined. Calling setRegion on the mapView causes the 
+map to snap to the defined starting region.
+
+The custom annotations detailing the history and purpose of each building in the
+Yard are another element critical to the HarvardTour app's purpose. These 
+annotations appear as purple pushpins in the 2D map view. To add a simple 
+annotation, the MKPointAnnotation class is used. This class serves as the model 
+for the custom annotations used in the app. The MKPointAnnotation class has 
+three required properties: coordinate (where to place the pin), title (main text
+displayed when a user taps the pin), and subtitle (additional text which appears
+below the title). Once a point annotation has been created, calling 
+addAnnotation on the MapView adds a red pin at the specified coordinate to the 
+MapView. However, the plain red pin left some things to be desired, so the 
+MKPointAnnotation model was customized. Doing this required implementing the 
+MKAnnotation protocol, which defines the same three properties as 
+MKPointAnnotation, but allows the addition of new properties and methods; 
+MKAnnotation simply does less for us than MKPointAnnotation, leaving us to add 
+the additional features we want. 
+
+Displaying these custom annotations is similiar to the display of 
+UITableViewCells. In order to connect the controller to this custom model, we 
+need to set the delegate. We then need to connect this through Storyboard, as 
+well as indicate that some controller (the one with the MapKit) is going to use
+the MKMapViewDelegate protocol which defines methods in addition to the three 
+aforementioned basic ones. 
+
+As previously mentioned, the MKAnnotation protocol defines additional properties
+allowing us to do whatever we want with our annotations. Namely, we have the 
+viewForAnnotation method, similar to the cellForRowAtIndexPath method used on 
+tableView. The two are analogous in that viewForAnnotation is called for every 
+annotation we want to display. In an attempt to be careful with memory and 
+recycle as much as possible, the app trys to reuse already-created pins instead 
+of creating new ones all the time. So, once a user scrolls a pin off the screen,
+that pin is removed from the map and placed in a pool (the cache) from which it 
+can be pulled quickly and reused elsewhere rather than making a new one each 
+time a pin needs to be displayed. (This is similar to the may in which rows in a 
+table view are reused once they have been scrolled off screen.) In order to do 
+this, we use a method called dequeReusableAnnotationViewWithIdentifier which 
+fetches available pins from the cache and uses existing objects rather than 
+allocing a new ones wherever possible. Whenever the cache is empty, which will 
+be the case when the map's first annotations are being created, we create 
+MKPinAnnotationView objects. Each of these objects has a property called 
+annotation, the model that this view is representing (an MKPointAnnotation). 
+
+Some other relevant properties are pinColor, which is used here to change to 
+color of the annotation pins to purple (other options are red or green), 
+animatesDrop, which controls whether or not pins fall from the sky as they are 
+added to the map (here commented out, since the drop was deemed unecessary), 
+canShowCallout, which determines whether or not pins should show an information 
+callout when they are tapped, and rightCalloutAccessoryView, which displays an 
+optional callout acccessory view for the callout (in this case, a blue detail 
+disclosure button that appears to the right on callouts for each pin). An 
+important method in the delegate which is relevant here is 
+calloutAccessoryControlTapped, which allows the app to respond appropriately 
+when a user taps that blue detail disclosure button we just created with the 
+rightCalloutAccessoryView property. This callback is fired every time the user 
+taps the detail disclosure button.
+
+When it comes to implementing this custom annotation, we create a new class 
+called CustomAnnotation where we implement the MKAnnotation protocol and define 
+the three required properties for a pin - coordinate, title, and subtitle. We 
+also create a new method, initWithCoordinate, which allows us to avoid setting 
+the coordinate property directly. Using our new CustomAnnotation class is 
+similar to using the MKPointAnnotation class, except that CustomAnnotation is 
+initialized instead of MKPointAnnotation while creating the annotations. 
+
+When it comes to customizing the view, it should be noted that the notion of an
+identifier exists just as it does in a tableView. Since we only have one kind of
+pin, we can reuse the same identifier, here named "Marker." Before creating a 
+new annotation, we check 1) if the current annotation is marking the user's 
+location, and 2) if there are any pins available in the cache. If the current 
+annotation is marking the user's position, we do nothing to change it. This 
+leaves us with the characteritic blue dot for marking current location. If the 
+current annotation is not associated with the user's location and there are no 
+pins available in the cache, we alloc a new pin and give it some annotation, as 
+with initWithAnnotation. This comes from the top of the function, where the 
+model is a parameter to the method (meaning it can be accessed from the view).
+Also note that we are detecting whether or not a user has pressed a detail 
+disclosure button with calloutAccessoryControlTapped. If so, we display an alert
+titled "Additional Details" which contains the full subtitle text for the 
+annotation in question. (The code to do this is passed from the arCallout 
+function as a message.) As before, calling addAnnotation on the mapView adds a 
+custom annotation pin to the map.
+
+3D Augmented Reality (AR) View
+
+The app's defining feature is its use of AR. Through the use of a 
+freely-available AR framework called 3DAR (http://3dar.us/), the custom
+annotations appearing on the 2D map are projected over live camera output.
+Integration of 3DAR into the app first required the addition of map annotations 
+to an MKMapView - this process is described above. The next step involved 
+downloading and linking the 3DAR library to the project. This process is similar
+to the addition of frameworks, also described above. In this case, the Library 
+Search Paths build setting also had to be updated to point to the 3DAR library.
+Next, the CoreLocation, CoreMotion, OpenGLES, QuartzCore, and UIKit frameworks 
+were added to the project, and -lstdc++ and -ObjC were added to the target's 
+Other Linker Flags build setting. Device and application keys for the 3DAR 
+framework (obtained by emailing 3DAR developers) were also added to the 
+SM3DAR_keys.txt file.
+
+The next big step was switching the MKMapView on which the pins are displayed 
+to and SM3DARMapView (a subclass of MKMapView), as by adding a Custom Class in
+Storyboard. The 3DAR header file also had to be imported to the file where 
+MKMapView is defined, and all MKMapView references were changed to SM3DARMapView
+references. The final step was to implement sm3darLoadPoints, a function which is 
+automatically called when 3DAR is ready for data loading. This is where 
+annotations are defined and added to the map view. To allow the user to view 
+annotations projected over clean camera output, startCamera was called, and the 
+3darDrawGroundplaneGrid option in the 3dar.plist file was turned off (set to 
+"NO"). Turning on the camera made the phone's status bar disappear - it was 
+brought back with setStatusBarHidden:NO.
+
+While efforts to add detail disclosure buttons to the AR callouts were 
+ultimately unfruitful, code which should implement this functionality has been 
+left in the project to show our progress. Lack of good 3DAR documentation proved
+to be the reason we were not able to implement this feature. In principle, it 
+should have worked just like callouts in the 2D map (the process of adding these
+is described above).
+
+Finally, the app's icon was designed in Pixelmator and imported to the project. 
+The 3DAR launch image was provided by 3DAR and added to comply with licensing 
+requirements.
+
+Enjoy! Please contact us if you have any questions.

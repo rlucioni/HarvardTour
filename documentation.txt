@@ -3,5 +3,5 @@ documentation.txt
 Renzo F Lucioni
 Anuv Ratan
 
-Harvard Tour
+HarvardTour
 iOS App
