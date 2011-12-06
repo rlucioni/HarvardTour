@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65112A36148DBF46005997E7 /* poster.png in Resources */ = {isa = PBXBuildFile; fileRef = 65112A35148DBF46005997E7 /* poster.png */; };
 		6512948D14843E91006C2135 /* lib3DAR_v2_1_3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6512948C14843E91006C2135 /* lib3DAR_v2_1_3.a */; };
 		652E9E7A1481B84C00C3793A /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 652E9E781481B84C00C3793A /* CustomAnnotation.m */; };
 		6576880214842BA800CAA112 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6576880014842BA800CAA112 /* Default.png */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65112A35148DBF46005997E7 /* poster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster.png; sourceTree = "<group>"; };
 		6512948C14843E91006C2135 /* lib3DAR_v2_1_3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = lib3DAR_v2_1_3.a; sourceTree = "<group>"; };
 		652E9E781481B84C00C3793A /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		652E9E791481B84C00C3793A /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				65EC2A6A1489D0430038AE6A /* design.txt */,
 				65EC2A6B1489D0430038AE6A /* documentation.txt */,
+				65112A35148DBF46005997E7 /* poster.png */,
 				65B393A414842B050091AE14 /* 3DAR SDK v2.1.3 */,
 				65E7857214808A2E0029C348 /* Harvard Tour */,
 				65E7856B14808A2E0029C348 /* Frameworks */,
@@ -337,6 +340,7 @@
 				65D2431914873CA400D62AB1 /* Default@2x.png in Resources */,
 				65EC2A6C1489D0430038AE6A /* design.txt in Resources */,
 				65EC2A6D1489D0430038AE6A /* documentation.txt in Resources */,
+				65112A36148DBF46005997E7 /* poster.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,3 +5,51 @@ Anuv Ratan
 
 HarvardTour
 iOS App
+
+
+
+The HarvardTour app is meant to be easy to use. First, if you don't 
+already have the source, pull the code from GitHub 
+(https://github.com/lucesco/HarvardTour). Build and run the source in Xcode. (If 
+the code refuses to compile, remove the app icons from the build settings. This 
+has been a source of problems on the past.) For best performance, run the app on
+an iPhone, not in the simulator. (If the app quits after running for a few 
+minutes on your phone, request a device-specific key from 3DAR at 
+http://3dar.us/request/ and paste it into SM3DAR_keys.txt, overwriting any text 
+already there.) There is no configuration necessary apart from making sure the 
+iPhone's Location Services are on.
+
+Using the app is simple. For a 2D map view of Harvard Yard, start the app and lay 
+the phone on a flat surface such as a table or the palm of your hand. Scroll and
+zoom the map with your fingers, as you normally would with a map on iOS. Tap on 
+one of the purple pins to get a callout with the name of the building the pin is
+marking. If you want to know more about that building, tap the blue button with
+the white arrow to get an additional details pop-up. When you are done, tap 
+"Okay" to return to the 2D map view. Your location will appear as a blue dot on 
+the 2D map.
+
+For an augmented reality (AR) view of these map annotations, simply hold the 
+phone up vertically with the screen facing you. Move about as usual (walk, run,
+skip, spin - whatever your preferred method of ambulation might be) and watch 
+the screen to see what buildings in the Yard you are facing and how far away you
+are from them. To see this information for a marker, you must first "focus" on a
+marker. To focus on a specific marker, target it by moving your phone (or 
+yourself) such that the marker turns red. Typically, this will involve moving 
+the phone such that the marker is near the center of the screen.
+
+You can switch smoothly between the 2D map view and the 3D AR view at any time 
+by holding the phone up vertically (for AR) or laying it down flat (for the 
+map). It is also possible to tap a pin in the 2D map view, then the blue button 
+with the white arrow to bring up additional details, and then hold the phone up 
+to see the additional details pop-up overlayed on camera output. Know that 
+tapping the 3DAR icon in the lower right-hand corner while in AR view will 
+change the "camera altitude," or your viewpoint elevation. There are three 
+camera altitudes available: 4 m, 50 m, and 350 m above the ground. Tapping the 
+3DAR icon repeatedly will cycle through these altitudes. Selecting 350 m above 
+the ground will give you something resembling an eagle's eye view of the 
+markers. None of these camera altitudes affect actual camera output though, so 
+selecting 50 m or 350 m will move the AR markers out of place. Finally, know 
+that in the event of compass interference, you should wave the phone in a figure
+eight motion, as instructed on-screen.
+
+Enjoy!
