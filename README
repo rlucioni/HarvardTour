@@ -1,4 +1,25 @@
 README
 
-An iOS app for touring Harvard's Campus. Experiment with MKMapView in iOS. Will
-add AR functionality.
+Harvard Tour
+
+@ Renzo Lucioni, 2012
+
+
+Harvard Tour is an iOS app which uses augmented reality to help tour Harvard's 
+campus. 
+
+When used on a iPhone, laying the phone flat (e.g., on a table) will
+give the user a map view, with pins indicating points of interest around campus,
+as well as the user's current location. Touching pin will bring it label, and
+touching the label will bring up a dialogue box with more detailed information
+about the landmark. 
+
+Raising the phone vertically will switch the app into augemented reality (AR)
+mode. Using the iPhone's camera, the app places markers (analogous to the pins
+seen in the map view) over live camera input. As a user turns to face a marker,
+the marker is highlighted in red, and the user's distance to the marker is
+indicated. Laying the phone flat again will seamlessly switch the app back into
+the map view.
+
+This app was developed as a final project for CS 50 at Harvard - development is
+ongoing.
