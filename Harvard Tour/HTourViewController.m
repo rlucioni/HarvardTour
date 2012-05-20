@@ -2,7 +2,7 @@
 //  HTourViewController.m
 //  Harvard Tour
 //
-//  Created by Renzo Lucioni and Anuv Ratan on 11/25/11.
+//  Created by Renzo Lucioni on 11/25/11.
 //
 
 #import "HTourViewController.h"
